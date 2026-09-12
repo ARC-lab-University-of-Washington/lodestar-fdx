@@ -94,7 +94,7 @@ LODESTAR_CORPUS=$LODESTAR_CORPUS ./run_all.sh
 | Metric | Value | Set |
 |---|---:|---|
 | Fault-direction accuracy @7 | 85% | 107 in-corpus crew-observed anomalies |
-| Coverage AUC | 0.75 | 146 crew-observed anomalies |
+| Coverage AUC | 0.73 | 146 crew-observed anomalies |
 | Median time to diagnosis | ~18 s | Jetson; hardware-dependent, see `docs/REPRODUCING.md` |
 | Mean / peak power | 7.1 W / 10.6 W | measured on the Jetson — requires `tegrastats`, see `docs/MODEL.md` |
 

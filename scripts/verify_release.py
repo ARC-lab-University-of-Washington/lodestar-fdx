@@ -252,7 +252,7 @@ def c_coverage_auc():
     """Recompute the coverage AUC from the shipped dump and report it.
 
     NOTE: this reports rather than asserts. The shipped artifacts integrate to
-    0.7339; the paper states 0.75. See docs/REPRODUCING.md.
+    0.7339, reported as 0.73. See docs/REPRODUCING.md.
     """
     import importlib.util as iu
     sm_path = os.path.join(ROOT, "analysis", "subsystem_match.py")

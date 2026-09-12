@@ -2,7 +2,7 @@
 # AI use statement: docs/AI_USE.md
 ##
 # @file generalize_speech_signals.py
-# @brief GENERALIZE the flagship signals-vs-speech ablation to every verbatim air-to-ground fault report (7 atlas exchange_quotes + 14 cross-mission found_exch.
+# @brief GENERALIZE the flagship signals-vs-speech ablation to every verbatim air-to-ground fault report (7 atlas exchange_quotes + 11 cross-mission found_exch.
 #
 # ange). For each: extract the CREW's report (drop CapCom lines so the
 # ground's diagnosis isn't fed back), split into SIGNALS (CAPS annunciators +
@@ -12,7 +12,7 @@
 # split (no LLM). Run from analysis/; CUDA_VISIBLE_DEVICES=0.
 #
 """GENERALIZE the flagship signals-vs-speech ablation to every verbatim air-to-ground fault report
-(7 atlas exchange_quotes + 14 cross-mission found_exchange). For each: extract the CREW's report
+(7 atlas exchange_quotes + 11 cross-mission found_exchange). For each: extract the CREW's report
 (drop CapCom lines so the ground's diagnosis isn't fed back), split into SIGNALS (CAPS annunciators +
 readings + documented annunciator vocab) vs SPEECH (plain-language remainder), run diagnose under
 FULL/SIGNALS/SPEECH, score subsystem-match. Reports subsystem accuracy per condition.

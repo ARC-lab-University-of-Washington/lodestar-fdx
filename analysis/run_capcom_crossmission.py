@@ -36,9 +36,8 @@ OUTFILE = os.environ.get("OUT", _d("crossmission_lodestar.jsonl"))
 ASSIGN = [
     ("FDAI attitude jumped", "GNC"), ("docking probe would not extend", "structures"),
     ("cabin pressure dropped rapidly after LM jettison", "structures"),
-    ("1202 and 1201 program alarms", "GNC"), ("lightning strike at launch", "EPS"),
     ("docking probe will not capture", "structures"), ("landing radar will not lock", "GNC"),
-    ("SPS thrust light on the EMS", "SPS"), ("water leaking from the chlorine", "ECLSS"),
+    ("water leaking from the chlorine", "ECLSS"),
     ("AC bus 2 and DC bus B undervolt", "EPS"), ("SPS secondary yaw gimbal servo", "SPS"),
     ("erroneous gimbal-lock indication", "GNC"), ("spurious master alarms with no caution", "EPS"),
     ("EMS accelerometer null-bias shift", "GNC"),

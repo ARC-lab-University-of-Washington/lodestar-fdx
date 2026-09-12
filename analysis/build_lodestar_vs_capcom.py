@@ -54,7 +54,7 @@ def load(fn):
             "at it, e.g. DATA=../../apollo-anomaly-atlas/baselines")
     return {r["symptom"]: r for r in (json.loads(l) for l in open(p, encoding="utf-8") if l.strip())}
 dev = load("mt_subsystem_loop23.jsonl")   # LODESTAR dev-box (turns=matched_at, time=cum_s, matched)
-jet = load("loop23_jetson.jsonl")         # LODESTAR jetson (time=cum_s)
+jet = load("loop23_jetson.jsonl") if os.path.exists(os.path.join(DATA, "loop23_jetson.jsonl")) else {}   # LODESTAR jetson (time=cum_s)
 
 def num(x): return x if isinstance(x, (int, float)) and x >= 0 else None
 

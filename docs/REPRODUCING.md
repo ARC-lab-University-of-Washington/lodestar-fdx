@@ -24,7 +24,7 @@ cd analysis && python3 score_subsystem.py
 | 85% fault-direction accuracy on the 107 | `analysis/score_subsystem.py` over `baselines/decisions_146_k8.jsonl` |
 | 255 / 146 / 107 / 39 split | `analysis/subsystem_match.is_in_corpus` |
 | 3,370 → 3,148 corpus | `scripts/verify_release.py` |
-| 13 turn pairs, LODESTAR 28/37 vs CAPCOM 37/37 | `analysis/build_lodestar_vs_capcom.py` |
+| 12 turn pairs on the 15 turn-verified, LODESTAR 27/34 vs CAPCOM 34/34 | `analysis/build_lodestar_vs_capcom.py` |
 
 These re-score stored run dumps rather than re-running generation. The Apollo 13
 figures — 8 Mission Control turns, 13.5 min — are constants from the transcript
