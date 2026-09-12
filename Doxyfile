@@ -1,0 +1,36 @@
+# Doxygen configuration for LODESTAR-FDX (Python).
+# Generate with:  doxygen Doxyfile     ->  docs/api/html/index.html
+
+PROJECT_NAME           = "LODESTAR-FDX"
+PROJECT_BRIEF          = "Offline, on-device, citation-grounded fault diagnosis for Earth-independent spaceflight"
+OUTPUT_DIRECTORY       = docs/api
+CREATE_SUBDIRS         = NO
+
+INPUT                  = lodestar_edge eval analysis ingest README.md
+FILE_PATTERNS          = *.py *.md
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */__pycache__/* */docs/api/*
+USE_MDFILE_AS_MAINPAGE = README.md
+
+# Python: docstrings carry the Doxygen tags, so let Doxygen read them.
+OPTIMIZE_OUTPUT_JAVA   = YES
+EXTENSION_MAPPING      = py=Python
+PYTHON_DOCSTRING       = NO
+JAVADOC_AUTOBRIEF      = YES
+MARKDOWN_SUPPORT       = YES
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+HIDE_UNDOC_MEMBERS     = NO
+SORT_MEMBER_DOCS       = NO
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_TREEVIEW      = YES
+HTML_DYNAMIC_SECTIONS  = YES
+
+HAVE_DOT               = NO
+CLASS_DIAGRAMS         = YES
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = NO

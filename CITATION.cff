@@ -1,0 +1,79 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper. If you use the benchmark, cite the dataset too."
+title: "LODESTAR-FDX: offline, on-device, citation-grounded fault diagnosis for Earth-independent spaceflight"
+abstract: >-
+  An offline diagnostic assistant for crewed spaceflight: BM25 retrieval over a
+  knowledge graph distilled from Apollo flight manuals, a deterministic scope gate,
+  and a 3B language model running on a low-SWaP flight computer. Every candidate
+  cause is attributed to a manual segment, or the system declines.
+type: software
+version: 1.0.0
+license: BSD-3-Clause
+repository-code: "https://github.com/ARC-lab-University-of-Washington/lodestar-fdx"
+keywords:
+  - fault diagnosis
+  - spaceflight
+  - Earth-independent operations
+  - retrieval-augmented generation
+  - edge computing
+  - human-AI interaction
+authors:
+  - family-names: Nathan
+    given-names: Gokul
+    orcid: "https://orcid.org/0000-0002-2716-2443"
+    affiliation: University of Washington
+  - family-names: Pasupathi
+    given-names: Kavimitiran
+    orcid: "https://orcid.org/0009-0007-1475-4638"
+    affiliation: University of Washington
+  - family-names: Shen
+    given-names: Yile
+    orcid: "https://orcid.org/0009-0001-5760-146X"
+    affiliation: University of Washington
+  - family-names: Stafford
+    given-names: Maxwell
+    affiliation: University of Washington
+  - family-names: Shao
+    given-names: Kevin
+    orcid: "https://orcid.org/0009-0003-7527-2879"
+    affiliation: University of Washington
+  - family-names: Mamishev
+    given-names: Alexander
+    orcid: "https://orcid.org/0000-0002-3903-860X"
+    affiliation: University of Washington
+  - family-names: Makhsous
+    given-names: Sep
+    orcid: "https://orcid.org/0000-0002-3618-9736"
+    affiliation: University of Washington
+preferred-citation:
+  type: conference-paper
+  title: >-
+    Sensemaking Without Mission Control: How a Grounded Onboard Assistant
+    Redistributes the Cognitive Work of Fault Diagnosis
+  collection-title: "SpaceCHI 2026"
+  year: 2026
+  publisher:
+    name: Springer
+  authors:
+    - family-names: Nathan
+      given-names: Gokul
+    - family-names: Pasupathi
+      given-names: Kavimitiran
+    - family-names: Shen
+      given-names: Yile
+    - family-names: Stafford
+      given-names: Maxwell
+    - family-names: Shao
+      given-names: Kevin
+    - family-names: Mamishev
+      given-names: Alexander
+    - family-names: Makhsous
+      given-names: Sep
+references:
+  - type: dataset
+    title: "The Apollo Anomaly Atlas: 255 Documented In-Flight Anomalies from the Crewed Apollo Missions"
+    doi: 10.5281/zenodo.22713950
+    year: 2026
+    authors:
+      - family-names: Nathan
+        given-names: Gokul

@@ -1,0 +1,10 @@
+# Corpus construction only (ingest/). NOT needed to run or evaluate LODESTAR —
+# the distilled corpus ships in the apollo-anomaly-atlas repository.
+-r requirements.txt
+pdfplumber>=0.10
+pytesseract>=0.3.10
+pypdfium2>=4.0
+# Also requires the Tesseract binary on PATH, or TESSERACT_CMD pointing at it:
+#   macOS   brew install tesseract
+#   Debian  apt-get install tesseract-ocr
+networkx>=3.0

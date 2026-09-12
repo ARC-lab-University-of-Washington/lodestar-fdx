@@ -1,0 +1,98 @@
+{
+  "_README": "Cross-mission Apollo anomaly scenario set for the §5.4 retrieval + grounding-or-silence evaluation. These are REAL, documented in-flight anomalies from the crewed Apollo missions (7-12, 14-17; Apollo 13 is the reference corpus and is excluded). Rationale: the fleet shared hardware (CSM Block II, LM, Saturn V), so anomalies from other flights are faults our Apollo-13 procedures corpus has never indexed but whose hardware it shares. scope='in' (shared CSM/LM/Saturn subsystems) drives recall@k / completeness; scope='out' (mission-unique: LRV, ALSEP, EVA/EMU, SIM-bay experiments) drives honest-decline (grounding-or-silence). 'relevant' = the corpus segment ids a subject-matter reviewer judges SHOULD be retrieved for an in-scope query; it is intentionally EMPTY and must be filled BLIND to system output (see paper §5.4). For scope='out', relevant stays [] and expect_decline=true. Consuming code should read the 'scenarios' list.",
+  "_integrity_notes": [
+    "All sources are NASA primary documents but remain <VERIFY> until confirmed against clean scans. Apollo 10/11/12 items were confirmed via APSR Appendix F (JSC-09423), whose per-item anomaly NUMBERS were partly OCR-garbled — cite these by mission-report number + Anomaly-Summary section, not by an App-F item number.",
+    "Saturn V launch-vehicle anomalies live in separate MSFC flight-evaluation reports (not the spacecraft anomaly summaries); the Apollo 12 launch-lightning event is captured via the CSM/spacecraft side.",
+    "Biomedical / crew-illness events are excluded (not hardware anomalies).",
+    "One candidate (Apollo 17 deep-core / LSPE drill) was left OUT as UNVERIFIED."
+  ],
+  "sources": {
+    "APSR": "Apollo Program Summary Report, NASA JSC-09423 (Apr 1975), App. F 'Flight Anomalies' — NTRS 19750013242",
+    "MR7": "Apollo 7 Mission Report, MSC-PA-R-68-15, Anomaly Summary",
+    "MR8": "Apollo 8 Mission Report, Anomaly Summary",
+    "MR9": "Apollo 9 Mission Report, MSC-PA-R-69-2, Anomaly Summary",
+    "MR10": "Apollo 10 Mission Report, MSC-00126 (via APSR App. F)",
+    "MR11": "Apollo 11 Mission Report, MSC-00171 (via APSR App. F); ALSJ 'Program Alarms'",
+    "MR12": "Apollo 12 Mission Report, MSC-01855 (via APSR App. F)",
+    "MR14": "Apollo 14 Mission Report §14; Langley 'The Apollo 14 Docking Anomaly' NTRS 19730010157",
+    "MR15": "Apollo 15 Mission Report §14",
+    "MR16": "Apollo 16 Mission Report, MSC-07230 §14 — NTRS 19720026127",
+    "MR17": "Apollo 17 Mission Report, JSC-07904 §15 — NTRS 19730015117"
+  },
+  "scenarios": [
+    {"mission": "Apollo 7", "query": "lost S-band voice and PCM telemetry on the transponder, switched transponders", "subsystem": "comms-Sband", "scope": "in", "source": "MR7", "relevant": []},
+    {"mission": "Apollo 7", "query": "master alarm, main bus A and B undervolt near CM/SM separation", "subsystem": "EPS", "scope": "in", "source": "MR7", "relevant": []},
+    {"mission": "Apollo 7", "query": "fuel cell 2 condenser exit temperature high before an SPS burn", "subsystem": "EPS", "scope": "in", "source": "MR7", "relevant": []},
+    {"mission": "Apollo 7", "query": "FDAI attitude jumped about 160 degrees switching from G and N to SCS", "subsystem": "GNC", "scope": "in", "source": "MR7", "relevant": []},
+    {"mission": "Apollo 7", "query": "primary water evaporator erratic, wick dryout at low load, turned it off", "subsystem": "ECLSS", "scope": "in", "source": "MR7", "relevant": []},
+
+    {"mission": "Apollo 8", "query": "EMS delta-V counter jumping, accelerometer transients during entry", "subsystem": "GNC", "scope": "in", "source": "MR8", "relevant": []},
+    {"mission": "Apollo 8", "query": "cabin and hatch windows fogged over after several hours", "subsystem": "structures", "scope": "in", "source": "MR8", "relevant": []},
+    {"mission": "Apollo 8", "query": "potable water quantity indicator reading erratic", "subsystem": "ECLSS", "scope": "in", "source": "MR8", "relevant": []},
+
+    {"mission": "Apollo 9", "query": "no left translation during transposition, RCS quad isolation valve talkbacks barber-pole closed", "subsystem": "RCS", "scope": "in", "source": "MR9", "relevant": []},
+    {"mission": "Apollo 9", "query": "repeated master alarms from SPS propellant gauging indicating an unbalance", "subsystem": "SPS", "scope": "in", "source": "MR9", "relevant": []},
+    {"mission": "Apollo 9", "query": "lost automatic cryogenic H2 pressure control, over-pressurized to 270 psia", "subsystem": "EPS", "scope": "in", "source": "MR9", "relevant": []},
+    {"mission": "Apollo 9", "query": "scanning telescope shaft stuck intermittently, optics counter inoperative", "subsystem": "GNC", "scope": "in", "source": "MR9", "relevant": []},
+    {"mission": "Apollo 9", "query": "docking probe would not extend and unlatch until the third try", "subsystem": "structures", "scope": "in", "source": "MR9", "relevant": []},
+    {"mission": "Apollo 9", "query": "LM descent engine running rough near 27 percent throttle, suspected helium ingestion", "subsystem": "LM-DPS", "scope": "in", "source": "MR9", "relevant": []},
+    {"mission": "Apollo 9", "query": "LM supercritical helium tank pressure decaying, leak at the squib valve", "subsystem": "LM-DPS", "scope": "in", "source": "MR9", "relevant": []},
+
+    {"mission": "Apollo 10", "query": "LM ascent stage tumbled at staging with large attitude excursions, near gimbal lock, AGS mode control switch position error", "subsystem": "GNC-AGS", "scope": "in", "source": "MR10", "relevant": []},
+    {"mission": "Apollo 10", "query": "cabin pressure dropped rapidly after LM jettison, tunnel not vented first", "subsystem": "ECLSS", "scope": "in", "source": "MR10", "relevant": []},
+    {"mission": "Apollo 10", "query": "master alarm and ascent propellant low-level light on the first ascent engine firing", "subsystem": "LM-APS", "scope": "in", "source": "MR10", "relevant": []},
+
+    {"mission": "Apollo 11", "query": "1202 and 1201 program alarms during powered descent, rendezvous radar switch configuration", "subsystem": "GNC-PGNS", "scope": "in", "source": "MR11", "relevant": []},
+    {"mission": "Apollo 11", "query": "LM descent engine fuel line high pressure after landing, heat exchanger froze", "subsystem": "LM-DPS", "scope": "in", "source": "MR11", "relevant": []},
+    {"mission": "Apollo 11", "query": "LM steerable S-band antenna losing lock, hard to hold comms during descent", "subsystem": "comms-Sband", "scope": "in", "source": "MR11", "relevant": []},
+    {"mission": "Apollo 11", "query": "O2 flow-rate master alarms during suit-loop pressurization", "subsystem": "ECLSS", "scope": "in", "source": "MR11", "relevant": []},
+
+    {"mission": "Apollo 12", "query": "lightning strike at launch, fuel cells dropped off the buses, inertial platform lost, telemetry garbled", "subsystem": "EPS", "scope": "in", "source": "MR12", "relevant": []},
+    {"mission": "Apollo 12", "query": "RCS propellant and helium isolation valves closed at CSM to S-IVB separation from pyro shock", "subsystem": "RCS", "scope": "in", "source": "MR12", "relevant": []},
+    {"mission": "Apollo 12", "query": "S-band high-gain antenna low signal in narrow-beam mode", "subsystem": "comms-Sband", "scope": "in", "source": "MR12", "relevant": []},
+    {"mission": "Apollo 12", "query": "O2 usage higher than expected, leak in the 900 psi service module oxygen system", "subsystem": "ECLSS", "scope": "in", "source": "MR12", "relevant": []},
+    {"mission": "Apollo 12", "query": "optics shaft angle fluctuating in zero-optics mode", "subsystem": "GNC", "scope": "in", "source": "MR12", "relevant": []},
+
+    {"mission": "Apollo 14", "query": "docking probe will not capture, repeated attempts, capture latches failed before hard dock", "subsystem": "structures-docking", "scope": "in", "source": "MR14", "relevant": []},
+    {"mission": "Apollo 14", "query": "spurious ABORT bit set in the LM guidance computer before powered descent", "subsystem": "GNC-PGNS", "scope": "in", "source": "MR14", "relevant": []},
+    {"mission": "Apollo 14", "query": "landing radar will not lock on during descent, cycled the breaker to change scale", "subsystem": "GNC", "scope": "in", "source": "MR14", "relevant": []},
+    {"mission": "Apollo 14", "query": "Abort Guidance System went dead during rendezvous braking", "subsystem": "GNC-AGS", "scope": "in", "source": "MR14", "relevant": []},
+    {"mission": "Apollo 14", "query": "rapid-repress oxygen bottles losing pressure, extra cabin repressurizations needed", "subsystem": "ECLSS", "scope": "in", "source": "MR14", "relevant": []},
+    {"mission": "Apollo 14", "query": "unable to disconnect main bus A", "subsystem": "EPS", "scope": "in", "source": "MR14", "relevant": []},
+
+    {"mission": "Apollo 15", "query": "SPS thrust light on the EMS lit with no fire command, short to ground in the delta-V thrust switch", "subsystem": "SPS", "scope": "in", "source": "MR15", "relevant": []},
+    {"mission": "Apollo 15", "query": "one of three main parachutes collapsed near 6000 feet, landed on two chutes", "subsystem": "structures-parachute", "scope": "in", "source": "MR15", "relevant": []},
+    {"mission": "Apollo 15", "query": "water leaking from the chlorine injection port when the cap was removed", "subsystem": "ECLSS", "scope": "in", "source": "MR15", "relevant": []},
+    {"mission": "Apollo 15", "query": "SM RCS propellant isolation valve talkbacks repeatedly showing closed", "subsystem": "RCS", "scope": "in", "source": "MR15", "relevant": []},
+    {"mission": "Apollo 15", "query": "AC bus 2 and DC bus B undervolt alarms, lost DSKY and panel backlighting", "subsystem": "EPS", "scope": "in", "source": "MR15", "relevant": []},
+
+    {"mission": "Apollo 16", "query": "SPS secondary yaw gimbal servo loop oscillating at burn checkout, open rate-feedback loop, delayed the landing", "subsystem": "SPS", "scope": "in", "source": "MR16", "relevant": []},
+    {"mission": "Apollo 16", "query": "water-glycol temperature control failed in auto, ran manual for the rest of the flight", "subsystem": "ECLSS", "scope": "in", "source": "MR16", "relevant": []},
+    {"mission": "Apollo 16", "query": "erroneous gimbal-lock indication, computer caged the platform, crew realigned", "subsystem": "GNC-PGNS", "scope": "in", "source": "MR16", "relevant": []},
+    {"mission": "Apollo 16", "query": "high heat leak into cryogenic hydrogen tank 3, vacuum annulus degraded", "subsystem": "EPS", "scope": "in", "source": "MR16", "relevant": []},
+    {"mission": "Apollo 16", "query": "high-gain antenna would not acquire for over an hour", "subsystem": "comms-Sband", "scope": "in", "source": "MR16", "relevant": []},
+    {"mission": "Apollo 16", "query": "LM RCS system A helium regulator leaking internally, relief valves cycling", "subsystem": "RCS", "scope": "in", "source": "MR16", "relevant": []},
+
+    {"mission": "Apollo 17", "query": "spurious master alarms with no caution-warning lights, main bus A undervolt light flickering, intermittent short", "subsystem": "EPS", "scope": "in", "source": "MR17", "relevant": []},
+    {"mission": "Apollo 17", "query": "cryogenic hydrogen tank pressure deadband narrowed, contaminated pressure switch", "subsystem": "EPS", "scope": "in", "source": "MR17", "relevant": []},
+    {"mission": "Apollo 17", "query": "EMS accelerometer null-bias shift, 0.05g light illuminated erroneously", "subsystem": "GNC", "scope": "in", "source": "MR17", "relevant": []},
+    {"mission": "Apollo 17", "query": "water-glycol temperature control valve failed to open properly", "subsystem": "ECLSS", "scope": "in", "source": "MR17", "relevant": []},
+    {"mission": "Apollo 17", "query": "LM oxygen demand regulator A suit-loop leakage during EVA depressurization, switched to regulator B", "subsystem": "ECLSS", "scope": "in", "source": "MR17", "relevant": []},
+
+    {"mission": "Apollo 15", "query": "lunar roving vehicle front steering inoperative at first activation", "subsystem": "LRV", "scope": "out", "source": "MR15", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 16", "query": "lunar roving vehicle rear steering inoperative on the first drive", "subsystem": "LRV", "scope": "out", "source": "MR16", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 17", "query": "lunar rover right-rear fender extension knocked off, dust on the crew", "subsystem": "LRV", "scope": "out", "source": "MR17", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 15", "query": "deep-core drill would not penetrate or separate on the surface", "subsystem": "ALSEP-drill", "scope": "out", "source": "MR15", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 14", "query": "Active Seismic Experiment thumper misfires on the lunar surface", "subsystem": "ALSEP", "scope": "out", "source": "MR14", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 14", "query": "Lunar Portable Magnetometer cable problem during the surface traverse", "subsystem": "ALSEP", "scope": "out", "source": "MR14", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 12", "query": "color lunar-surface TV camera burned out after being pointed near the Sun", "subsystem": "TV-camera", "scope": "out", "source": "MR12", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 12", "query": "MESA equipment handle stuck during surface deployment", "subsystem": "surface-gear", "scope": "out", "source": "MR12", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 16", "query": "SIM-bay mass-spectrometer boom motor burned out and would not retract", "subsystem": "SIM-bay", "scope": "out", "source": "MR16", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 16", "query": "gamma-ray spectrometer boom stalls during retraction", "subsystem": "SIM-bay", "scope": "out", "source": "MR16", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 15", "query": "SIM-bay panoramic camera velocity-over-height sensor anomaly", "subsystem": "SIM-bay", "scope": "out", "source": "MR15", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 11", "query": "sample return container would not seal closed on the surface", "subsystem": "surface-gear", "scope": "out", "source": "MR11", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 11", "query": "water entered the suit through the vent duct during EVA", "subsystem": "EMU", "scope": "out", "source": "MR11", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 9", "query": "liquid cooling garment developing air bubbles during EVA", "subsystem": "EMU", "scope": "out", "source": "MR9", "expect_decline": true, "relevant": []},
+    {"mission": "Apollo 17", "query": "lunar-sounder HF antenna boom limit switch stall", "subsystem": "experiment", "scope": "out", "source": "MR17", "expect_decline": true, "relevant": []}
+  ]
+}

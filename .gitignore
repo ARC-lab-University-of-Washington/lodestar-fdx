@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.DS_Store
+.idea/
+.claude/
+.ipynb_checkpoints/
+
+# data lives in the atlas repo — never vendored here
+corpus.json
+atlas_parsed.json
+apollo-anomaly-atlas/
+
+# model weights and runtime output
+*.gguf
+*.safetensors
+models/
+results/
+*.log
+*.out
+.env
+apollo-source-documents/
+docs/api/

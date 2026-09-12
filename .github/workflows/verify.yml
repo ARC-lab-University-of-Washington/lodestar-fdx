@@ -1,0 +1,30 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check out the benchmark corpus
+        uses: actions/checkout@v4
+        with:
+          repository: ARC-lab-University-of-Washington/apollo-anomaly-atlas
+          path: apollo-anomaly-atlas
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Release verification
+        env:
+          LODESTAR_CORPUS: apollo-anomaly-atlas/corpus/corpus.json
+          LODESTAR_ATLAS:  apollo-anomaly-atlas/data/anomalies.csv
+        run: python scripts/verify_release.py

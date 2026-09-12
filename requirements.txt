@@ -1,0 +1,5 @@
+# LODESTAR edge — minimal runtime deps. NO torch / no embedding model (BM25-only retrieval).
+rank_bm25>=0.2.2
+requests>=2.28
+# Generation runs on a local Ollama server (install separately): https://ollama.com
+# Pull the model once on the device:  ollama pull llama3.2:3b

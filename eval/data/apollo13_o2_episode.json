@@ -1,0 +1,63 @@
+{
+  "_doc": "Flagship transcript episode: Apollo 13 cryo-O2 tank failure. INPUT = the crew's real air-to-ground fault report (astronaut messages). BASELINE = the human mission-control loop that handled it, timestamps from the authoritative NASA record. METRIC = turns-to-diagnosis and time-to-diagnosis: from end of the astronaut fault report to the CapCom diagnosis. Numbers marked VERIFY are provisional (OCR-estimated) and must be reconciled against the full AFJ air-to-ground transcript before becoming a paper result.",
+  "episode_id": "apollo13_cryo_o2_bus_undervolt",
+  "mission": "Apollo 13",
+  "corpus_relation": "in-corpus (Apollo 13 is the reference corpus) — flagship, not a cross-mission scenario",
+  "source_transcript": "pdfs/apollo13/pdf-hr/a13-tec-transcript.pdf, pages ~165-173 (GET 55:52-56:2x)",
+  "authoritative_timestamp_sources": [
+    "https://www.nasa.gov/history/detailed-chronology-of-events-surrounding-the-apollo-13-accident/",
+    "https://www.nasa.gov/history/houston-weve-had-a-problem/",
+    "https://www.hq.nasa.gov/office/pao/History/apollo/problem.html"
+  ],
+
+  "input_utterances": [
+    {"get": "55:55:20", "speaker": "CMP", "text": "Okay, Houston, we've had a problem here.", "verified": true},
+    {"get": "55:55:35", "speaker": "CDR", "text": "Houston, we've had a problem. We've had a MAIN B BUS UNDERVOLT.", "verified": true},
+    {"get": "55:56:10", "speaker": "LMP", "text": "Okay. Right now, Houston, the voltage is looking good. And we had a pretty large bang associated with the caution and warning there. And as I recall, MAIN B was the one that had an amp spike on it once before.", "verified": true},
+    {"get": "55:57:xx", "speaker": "CDR", "text": "And, Houston, we had a RESTART on our computer and we had a PGNCS light and the RESTART RESET.", "verified": "VERIFY-get", "note": "content verbatim from transcript OCR; GET seconds not yet reconciled"},
+    {"get": "55:57:xx", "speaker": "CDR", "text": "We're looking at our SERVICE MODULE RCS HELIUM 1. We have B is barber poled and D is barber poled.", "verified": "VERIFY-get"},
+    {"get": "55:58:07", "speaker": "LMP", "text": "MAIN A UNDERVOLT now, too. It's reading about 25-1/2, MAIN B is reading zip right now.", "verified": true},
+    {"get": "55:58:xx", "speaker": "CDR", "text": "And, Jack, our O2 QUANTITY number 2 tank is reading zero.", "verified": "VERIFY-get"},
+    {"get": "56:09:xx", "speaker": "CDR", "text": "And it looks to me, looking out the hatch, that we are venting something. We are venting something out into space. It's a gas of some sort, coming out of window 1.", "verified": "VERIFY-get", "note": "the visual venting cue that let mission control finally characterize the failure (~14 min after the incident)"}
+  ],
+  "input_note": "MULTI-TURN evidence stream: the crew's real air-to-ground utterances in GET order, one per diagnostic turn. Lodestar replays them one at a time, accumulating evidence, and we record the turn at which it converges on the diagnosis (turns-to-diagnosis) vs the human loop. This is the SAME evidence the humans had, including the venting cue at turn 7 — if Lodestar converges before turn 7 (from the electrical picture alone) that is the 'beats the human loop' result; if it needs the venting cue too, that is reported honestly.",
+
+  "human_baseline": {
+    "report_start_get": "55:55:20",
+    "report_end_get": "55:55:39",
+    "report_end_note": "end of Lovell's 55:55:35 fault report (~a few seconds); this is t=0 for time-to-diagnosis",
+    "checkpoints": [
+      {"name": "receipt", "get": "55:55:42", "verified": true,
+       "capcom_text": "Roger. Main B undervolt.",
+       "meaning": "CapCom acknowledges receipt of the fault. NOT a diagnosis — the lower bound / comms floor.",
+       "delta_from_report_end_s": 3},
+      {"name": "diagnostic_recognition", "get": "56:09:xx", "verified": "VERIFY-get-approx",
+       "capcom_text": "Roger. We copy your venting.  (CapCom confirms the failure is real O2 venting, not an instrumentation glitch)",
+       "meaning": "First point at which the failure is correctly CHARACTERIZED as O2 loss / real venting rather than a suspected electrical/instrumentation transient. Documented as ~14 min after the incident.",
+       "delta_from_report_end_s": 810,
+       "delta_note": "~13-14 min; authoritative record states venting observed ~14 min after incident"},
+      {"name": "stabilizing_plan", "get": "57:xx:xx", "verified": "VERIFY",
+       "scope": "OUT OF SCOPE — the contribution is reduction to DIAGNOSIS, not resolution-plan generation. Kept only as historical context / an informational secondary checkpoint.",
+       "capcom_text": "powerdown to G&C checklist pink pages 1-5; subsequently power up the LM as a lifeboat",
+       "meaning": "CapCom issues the corrective PLAN grounded in the true failure (preserve the CM, move to the LM lifeboat).",
+       "delta_from_report_end_s": null,
+       "delta_note": "documented on the order of 1.5-2 h to the LM power-up decision; exact CapCom GET must be reconciled from the AFJ air-to-ground transcript"}
+    ],
+    "default_diagnosis_checkpoint": "diagnostic_recognition",
+    "turns_to_diagnosis": {
+      "to_receipt": 1,
+      "to_diagnostic_recognition": 8,
+      "to_diagnostic_recognition_note": "the human loop characterized the failure correctly only at the 8th crew evidence turn (the visual venting cue at ~56:09); the seven prior electrical/systems turns — including O2 QUANTITY 2 reading zero at turn 7 — did not suffice for the ground to conclude a real O2 loss rather than instrumentation",
+      "note": "human turns-to-diagnosis = index of the crew evidence turn by which the diagnosis was reached (crew utterances are the shared evidence stream both sides see)"
+    }
+  },
+
+  "resolution_anchor": {
+    "_source": "Report of Apollo 13 Review Board (Cortright Commission), 1970; NASA mission report. Standard historical record.",
+    "symptom": "Master alarm with MAIN BUS B (then A) UNDERVOLT shortly after a cryo-tank stir; loud bang; computer RESTART / PGNCS light; SM RCS helium indications; O2 quantity 2 reading zero; two of three fuel cells lost.",
+    "component_terms": ["cryogenic oxygen tank", "oxygen tank no. 2", "fuel cell", "main bus B", "main bus A", "undervolt", "service module", "reactant valve", "power down", "lunar module", "LM lifeboat", "descent battery"],
+    "verified": true,
+    "documented_cause": "Cryogenic oxygen tank no. 2 in the service module failed (insulation on fan wiring, damaged before flight, ignited during the stir), rupturing the tank and the SM bay. Loss of O2 caused fuel cells 1 and 3 to fail, dropping main buses B and A. The CSM lost its primary power and oxygen source.",
+    "corrective_action": "Power down the Command/Service Module to preserve reentry consumables; power up the Lunar Module (Aquarius) from its descent-stage batteries and use it as a lifeboat for life support, power, and propulsion during the return; manage water/O2/power consumables for the return trajectory."
+  }
+}

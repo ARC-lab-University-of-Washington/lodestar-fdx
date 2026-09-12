@@ -1,0 +1,841 @@
+{
+ "missions": [
+  {
+   "mission": "Apollo 7",
+   "source": "MR7",
+   "anchors": [
+    {
+     "symptom": "Lost S-band voice and PCM telemetry on the transponder; crew switched transponders",
+     "component_terms": [
+      "S-band transponder",
+      "secondary transponder",
+      "transponder select switch",
+      "PM subcarrier",
+      "PCM telemetry",
+      "S-band system",
+      "latching relay"
+     ],
+     "verified": true,
+     "documented_cause": "The PCM and voice subcarriers were lost on the secondary S-band transponder. Postflight X-ray, functional, bench, vibration, and temperature testing of the switch and transponder were all negative. The report concluded the only components within the S-band system that could have produced all the symptoms are the panel switch that selects the primary or secondary transponder and its associated wiring. Switching the select switch without the required momentary hesitation in the OFF position (to let latching relays reset) can leave both transponders ON and reproduce all the symptoms; the transponder select switch, directly above the frequently-used antenna select switch, may have been inadvertently thrown, activating both transponders.",
+     "corrective_action": "No hardware fault was found and no design change was made; probable cause was inadvertent actuation of the transponder select switch during frequent antenna switching. No further action required and the anomaly was closed.",
+     "source_quote": "The only components within the S-band system which could have failed and caused all these symptoms are the panel switch for selecting the primary or secondary transponder and the wiring which controls this function... Switching without this hesitation can cause both transponders to be ON and will create all the symptoms of the failure."
+    },
+    {
+     "symptom": "Master alarm with main bus A and B undervoltage indications near CM/SM separation",
+     "component_terms": [
+      "main bus A",
+      "main bus B",
+      "dc main bus",
+      "entry battery",
+      "battery separator",
+      "caution and warning system",
+      "service propulsion gimbal motor",
+      "fuel cell 2"
+     ],
+     "verified": true,
+     "documented_cause": "At command module/service module separation the crew reported caution-and-warning undervoltage indications and voltages of 25.0 and 25.1 volts on main buses A and B (as much as 4.5 volts lower than expected). Voltage rose above the alarm level (26.2 V) in about 5 minutes and to 27.0 V in 20 minutes. The low-voltage condition resulted from the batteries' mid-range state of charge, low temperature, and displacement of electrolyte away from the plates in the zero-g environment.",
+     "corrective_action": "For Apollo 8, the batteries will be warmed by placing them on the main buses about 12 minutes before CM/SM separation; the service propulsion gimbal motors will be turned on and fuel cell 2 removed from the buses to provide higher battery loads and lessen transient loads at separation. Plans for subsequent missions include changing the battery separator material to an absorptive cellophane material to preclude electrolyte displacement in zero-g. Anomaly closed.",
+     "source_quote": "The low voltage condition resulted from the mid-range state of charge, low temperature, and displacement of electrolyte from contact with the plates because of the zero-g environment."
+    },
+    {
+     "symptom": "Fuel cell 2 condenser exit temperature high before an SPS burn",
+     "component_terms": [
+      "fuel cell 2",
+      "condenser exit temperature",
+      "secondary bypass valve",
+      "shuttle valve",
+      "fuel cell cooling system",
+      "radiator",
+      "service propulsion maneuver"
+     ],
+     "verified": true,
+     "documented_cause": "Prior to the fifth service propulsion maneuver, the fuel cell 2 condenser exit temperature rose to 180 F (nominal 155-165 F); after that maneuver, every time fuel cell loads were increased the fuel cell 2 exit temperature rose to 180-190 F. Flight data indicate the abnormal operation was caused by malfunctions in the respective secondary bypass valves; postflight, similar erratic operation of the shuttle valve was demonstrated with contaminants intentionally introduced into the system (i.e., a contamination problem).",
+     "corrective_action": "On Apollo 8 the radiator half of the cooling system was drained, flushed, and reserviced as a precaution. Studies were undertaken on the necessity of adding a filter upstream of the bypass valve or modifying the system to better protect the valve from contamination on subsequent spacecraft. Anomaly closed.",
+     "source_quote": "Flight data indicate that the abnormal operation was caused by malfunctions in the respective secondary bypass valves. After the flight, similar erratic operation of the shuttle valve has been demonstrated with contaminants intentionally introduced into the system."
+    },
+    {
+     "symptom": "FDAI total attitude jumped about 160 degrees when switching the attitude source from G&N to SCS",
+     "component_terms": [
+      "flight director attitude indicator",
+      "electronic display assembly",
+      "switching relay",
+      "sine/cosine resolver",
+      "guidance and navigation system",
+      "stabilization and control system"
+     ],
+     "verified": true,
+     "documented_cause": "The total attitude on flight director attitude indicator no. 1 changed about 160 degrees in pitch when the attitude source was switched from the guidance and navigation system to the stabilization and control system. The condition was reproduced on the ground by inhibiting the transfer of one of a pair of switching relays that select the sine and cosine resolver outputs from the respective attitude sources, so the FDAI resolver was driven with 400-cycle sine from the SCS and 800-cycle cosine from the G&N. On disassembly of the flight relay a tin/silver solder ball was found, large enough to have caused the condition (though not the 1-minute delay the crew first reported).",
+     "corrective_action": "The relay was of a type covered by a 1967 switching-logic analysis; as a result of that and other failures, all relays involved in critical switching functions were made redundant. No further action required and the anomaly was closed.",
+     "source_quote": "During ground tests on another system, the condition was reproduced by inhibiting the transfer of one of a pair of switching relays which select the sine and cosine resolver outputs from the respective attitude sources... A tin/silver solder ball was found, and it was large enough to have caused the condition noted, except the 1-minute delay reported by the crew."
+    },
+    {
+     "symptom": "Primary water evaporator operated erratically with wick dryout at low heat load; crew turned it off",
+     "component_terms": [
+      "primary water evaporator",
+      "water evaporator",
+      "boiler wick",
+      "temperature sensor",
+      "sponge material",
+      "automatic control mode",
+      "environmental control system"
+     ],
+     "verified": true,
+     "documented_cause": "Under the low, variable heat loads that existed, the primary evaporator operated erratically in the automatic mode, causing what appeared to be wick drying and subsequent flash freezing; it was frequently serviced with water but was ultimately turned off. The automatic-control thermodynamics are such that this behavior can be expected under low cyclic loads, verified with a similar evaporator under simulated flight conditions and with the flight evaporator postflight. Wet sponge material around the boiler-wick temperature sensors slowed sensor response to actual wick conditions.",
+     "corrective_action": "Removal of some of the sponge material in the area of the sensors that control the evaporator increased sensor response and prevented dryout under low, cyclic heat loads; under higher loads (when the evaporator is actually required) the system did not dry out in postflight testing. This modification was employed on command module 106 and subsequent. Anomaly closed.",
+     "source_quote": "Under the low, variable heat loads which existed, the primary evaporator operated erratically in the automatic mode, causing what appeared to be wick drying and subsequent flash freezing... Removal of some of the sponge material in the area of the sensors which control operation of the evaporator prevented dryout under the low, cyclic heat loads."
+    }
+   ]
+  },
+  {
+   "mission": "Apollo 8",
+   "source": "MR8",
+   "anchors": [
+    {
+     "symptom": "EMS delta-V counter jumping, accelerometer transients during entry",
+     "component_terms": [
+      "entry monitor system",
+      "delta V counter",
+      "accelerometer",
+      "damping fluid",
+      "O-ring seal",
+      "sign change circuit",
+      "scroll assembly"
+     ],
+     "documented_cause": "Two distinct problems. (a) The g/velocity transients during entry (and the slow drive-to-null after the third midcourse correction) were caused by a bubble in the entry monitor system accelerometer's damping fluid; the case contained ~1 cubic centimeter less fluid than when filled, with damping fluid having leaked around the O-ring seal. (b) The delta-V counter jumps at spacecraft/S-IVB separation and on rapid 'standby'-to-'automatic' mode switching resulted from a logic race involving the sign-change circuit in the counter, which cannot occur unless the counter reading is near zero.",
+     "corrective_action": "The accelerometer O-ring seal was changed from a screw type to a plug type for units flown on spacecraft 106 and subsequent. When the system is used to monitor accrued velocity (e.g., at separation), the counter can be manually biased away from zero to avoid the logic-race jumps. The EMS is retained as a backup mode for delta V and entry ranging, and entry bank angles will be furnished to the crew if both the guidance-and-navigation system and the EMS fail. Anomaly left open with an Anomaly Report to be prepared.",
+     "source_quote": "Detailed testing and inspection of the accelerometer disclosed a bubble in the damping fluid. The bubble may explain the behavior of the g trace during entry and the random pulses during the tilt-table test. ... The jumps are the result of a logic race involving the sign change circuit in the counter and, therefore, cannot occur unless the counter reading is near zero.",
+     "verified": true
+    },
+    {
+     "symptom": "cabin and hatch windows fogged over after several hours",
+     "component_terms": [
+      "hatch window",
+      "side windows",
+      "rendezvous windows",
+      "RTV sealing material",
+      "heat shield pane",
+      "pressure panes",
+      "window insulation"
+     ],
+     "documented_cause": "Contamination/fogging of the windows was caused by outgassing of silicone oils from the RTV (room-temperature-vulcanizing) sealing material, consistent with the Apollo 7 window-fogging analysis that identified this as the primary cause. Visibility through the hatch window degraded to uselessness after about 6 hours; side windows 1 and 5 fogged to a lesser degree, while rendezvous windows 2 and 4 remained usable.",
+     "corrective_action": "A new RTV curing process was introduced to greatly reduce the residual silicone oils; windows 1, 3, and 5 on command module 104 were refitted with insulation cured by the new process. The space between the pressure panes is filled with dry nitrogen. Effectiveness was verified by a 10-day ground test and a more-extreme-condition test for lunar missions; both showed successful performance. Anomaly closed.",
+     "source_quote": "These conditions were consistent with what was expected as a result of the Apollo 7 window fogging analysis, which showed the primary cause to be outgassing of silicone oils from the RTV sealing material.",
+     "verified": true
+    },
+    {
+     "symptom": "potable water quantity indicator reading erratic",
+     "component_terms": [
+      "potable water tank",
+      "quantity measuring system",
+      "variable resistor",
+      "indicator housing",
+      "actuator pulley",
+      "gas bladder",
+      "oxygen bleed filter and orifice",
+      "bladder support frame"
+     ],
+     "documented_cause": "The potable water tank quantity measurement became erratic at 143:53:00 because moisture reached the indicator's variable resistor; disassembly revealed corrosion in the indicator housing, on the variable resistor, and on the actuator pulley, indicating moisture in the oxygen side of the tank pressurization system. The residue was identified as urine and possibly waste-water. When the potable tank is full (beginning at about 90 percent), the bladder wall contacts the bladder support frame, isolating the 20-psig oxygen supply from the bleed orifice and lowering gas-bladder pressure, which lets water and urine enter through the oxygen bleed filter and orifice into the indicator housing/bladder during dumps. The system did not leak in flight.",
+     "corrective_action": "For Apollo 9, the plan is to terminate potable water fill at approximately 80 percent of the maximum quantity (to prevent the bladder from contacting the support frame and depressurizing). Anomaly closed.",
+     "source_quote": "Moisture in the variable resistor has been demonstrated to cause erratic readings of the type observed inflight. It has also been demonstrated that when the potable water tank is full (beginning at about 90 percent), the bladder wall comes in full contact with the bladder support frame.",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "mission": "Apollo 9",
+   "source": "MR9",
+   "anchors": [
+    {
+     "symptom": "No left translation during transposition; RCS quad C/D propellant isolation valve talkbacks showed barber-pole (closed)",
+     "component_terms": [
+      "propellant isolation valve",
+      "reaction control system (RCS) quad",
+      "quad C / quad D",
+      "position indicator flag (talkback)",
+      "momentary switch (panel 2)",
+      "magnetic latch",
+      "service module RCS"
+     ],
+     "documented_cause": "Investigation was inconclusive. Candidate causes examined and largely discounted were inadvertent crew switch actuation, particulate contamination, induced electrical transients, and reduced magnetic latching force. Mechanical shock from CSM/adapter separation was the leading candidate (individual-valve tests showed 80g at an ~11 ms onset could close a valve, and separation shock was estimated at 180-260g), but shock tests on an assembled quad up to 670g failed to close the valves, and Apollo 7 and 8 with the same configuration had no problem, so no definite cause was established.",
+     "corrective_action": "Because hardware was not detrimentally affected but a valve closure remains possible, flight procedures were modified to verify isolation valve indications after exposure to shock environments. Anomaly closed. (Section 17.1.1)",
+     "source_quote": "Results of the investigation have been inconclusive as to the cause of the valve closures. However, the possibility of a valve closure still exists, and since the hardware was not detrimentally affected, the flight procedures have been modified to verify isolation valve indications after exposure to shock environments.",
+     "verified": true
+    },
+    {
+     "symptom": "Repeated (eight) master alarms from SPS propellant utilization and gaging system indicating an excessive propellant unbalance during the third SPS firing",
+     "component_terms": [
+      "service propulsion system (SPS)",
+      "propellant utilization and gaging system",
+      "capacitive measuring tube/probe",
+      "oxidizer measuring circuit",
+      "point sensors (auxiliary gaging system)",
+      "master alarm / caution and warning"
+     ],
+     "documented_cause": "All master alarms were explainable. The first alarm was caused by propellant level in the capacitive measuring tube not reaching the settled level as soon as expected after start-up. The next five alarms resulted from an electrical zero bias in the oxidizer measuring circuit after storage tank depletion; these continuous alarms prompted the crew to switch to the auxiliary (point-sensor) system. A legitimate unbalance caused an alarm during auxiliary operation, and switching back to the primary system produced another alarm reflecting the oxidizer storage tank bias plus a legitimate unbalance.",
+     "corrective_action": "Master alarm and caution-and-warning functions from the propellant utilization and gaging system were deleted (cut from the system) for spacecraft 106 and subsequent; a procedural change in the zero adjustment was implemented to minimize the electrical zero bias; and the extended time required for gaging stabilization was to be brought to the attention of subsequent crews. Anomaly closed. (Section 17.1.7)",
+     "source_quote": "The first alarm was caused by propellant level in the capacitive measuring tube not reaching the settled level as soon as expected after start-up. The next five alarms, shown in figure 17-7, resulted from an electrical zero bias in the oxidizer measuring circuit after storage tank depletion.",
+     "verified": true
+    },
+    {
+     "symptom": "Lost automatic cryogenic hydrogen pressure control; heaters failed to activate at 93 hr, then all H2 tank heaters came on and over-pressurized the tanks to about 270 psia",
+     "component_terms": [
+      "cryogenic hydrogen tank",
+      "automatic pressure control system",
+      "pressure switch",
+      "heater",
+      "motor control circuit",
+      "16-gage terminal board",
+      "fan"
+     ],
+     "documented_cause": "The pressure switches were ruled out (a fail-to-turn-on would require one switch to fail open while a fail-to-turn-off would require both switches to fail closed). The most probable cause was an intermittent open-circuit condition in the motor control circuit (including the power line, ground, and the terminal board for 16-gage pins) resulting from the undocking shock; 16-gage terminal boards had been a source of intermittent contact in other circuits during ground tests.",
+     "corrective_action": "No corrective action taken for Apollo 10, because the tank pressures can be controlled manually by either the heaters or the fans if the automatic system fails (as was done for the remainder of the Apollo 9 mission). Anomaly closed. (Section 17.1.3)",
+     "source_quote": "The most probable cause for the failures was an intermittent open-circuit condition in the motor control circuit (including the power line, ground, and the terminal board for 16-gage pins) resulting from the undocking shock.",
+     "verified": true
+    },
+    {
+     "symptom": "Scanning telescope shaft stuck intermittently during the first 5 days; mechanical counter shaft became inoperative on the second day",
+     "component_terms": [
+      "scanning telescope",
+      "mechanical counter / counter shaft",
+      "\"tenths\" drum drive hub",
+      "retaining pin",
+      "geneva gear/mechanism",
+      "split anti-backlash gear",
+      "shaft resolver",
+      "optics"
+     ],
+     "documented_cause": "The counter malfunction was caused by the pin on the \"tenths\" drum dropping out and eventually jamming the gear, so the geneva mechanism no longer engaged the \"units\" drum. Root cause was an out-of-tolerance (oversize) hole on the drive hub of the \"tenths\" drum, which lacked the required interference fit; repeated geneva-mechanism impact let the pin slip out and contact the pinion gear, dislodging it. The loose pin then lodged between the split anti-backlash gear on the shaft resolver, causing the intermittent shaft sticking.",
+     "corrective_action": "The counter (design common to CM and LM optics) on the Apollo 10 command module was replaced with a properly inspected counter, and counters on subsequent command modules and lunar modules were to be replaced with inspected counters. Anomaly closed. (Section 17.1.2)",
+     "source_quote": "The failure was the result of an out-of-tolerance hole on the drive hub of the \"tenths\" drum. Repeated impact by the geneva mechanism resulted in the pin slipping from the hole sufficiently to come into contact with the pinion gear on the counter shaft.",
+     "verified": true
+    },
+    {
+     "symptom": "Docking probe would not extend and physically unlatch until the third attempt during undocking; later showed barber-pole (not cocked) when retract was selected",
+     "component_terms": [
+      "docking probe",
+      "probe extend/release-retract switch",
+      "probe-extend latch",
+      "release motor",
+      "docking mechanism",
+      "barber-pole display indicator"
+     ],
+     "documented_cause": "The extend/release-retract switch was not held in position long enough for a separating force to effect physical separation, and was not actuated long enough to allow the docking probe to fully extend/cock. By design, the latches will not cock during undocking if the release motors are not energized long enough for the latches to spring back to proper cocking attitude, and the system then returns to the uncocked (latches-locked) docked configuration.",
+     "corrective_action": "The Apollo Operations Handbook was changed to require holding the extend/release-retract switch in the extend/release position until physical separation occurs. Anomaly closed. (Section 17.1.4)",
+     "source_quote": "Indications are that the switch was not held in position long enough for a separating force to effect physical separation.",
+     "verified": true
+    },
+    {
+     "symptom": "LM descent engine ran rough at about 27-percent throttle for a few seconds during the second descent engine firing, then smoothed out; suspected helium ingestion",
+     "component_terms": [
+      "descent engine / descent propulsion system",
+      "throttle assembly",
+      "propellant interface (oxidizer/fuel interface pressure)",
+      "engine chamber pressure",
+      "injector",
+      "zero-g can",
+      "propellant lines",
+      "helium"
+     ],
+     "documented_cause": "Helium ingestion. Helium from the propellant tanks entered the propellant lines under lateral and/or rotational accelerations (highly probable with the ~60-percent ullage and the zero-g can uncovered). As the gas passed the throttle assembly (operating at cavitating pressures) the oxidizer then fuel interface pressures rose, and bleeding of helium into the injector caused engine chamber pressure fluctuations, i.e., the roughness. Ground tests with helium deliberately introduced matched the flight data closely.",
+     "corrective_action": "Tests demonstrated that ingestion of helium into the engine in this manner has no detrimental effect on the system; no hardware change required. Anomaly closed. (Section 17.2.11)",
+     "source_quote": "Helium from the propellant tanks could enter the propellant lines under certain conditions of lateral and/or rotational accelerations... The variation of interface pressures and the bleeding of helium into the injector results in fluctuations in the engine chamber pressure.",
+     "verified": true
+    },
+    {
+     "symptom": "LM supercritical helium tank pressure decayed (2.9 psi/hr) after the first descent engine firing instead of rising; leak traced to the squib valve",
+     "component_terms": [
+      "supercritical helium tank",
+      "descent propulsion system",
+      "squib valve (internally brazed braze joint)",
+      "heat exchanger",
+      "solenoid latch valve",
+      "helium regulator",
+      "bimetallic fitting"
+     ],
+     "documented_cause": "A leak of about 0.1 lb/hr (upstream of the heat exchanger) caused the 2.9 psi/hr decay; ground tests with a leak introduced at the squib valve duplicated the flight temperature indications. A failure of an internally brazed squib valve (a crack in thin brazing material) was found during LM-2 drop tests, most likely caused by the shock of the squib firing to pressurize the ascent propulsion system. The Apollo 9 squib valve was internally brazed, which prevented inspection of the joint. Conclusion: the leak was probably caused by a defective braze internal to the squib valve that could not be inspected.",
+     "corrective_action": "The Apollo 10 descent propulsion high-pressure squib valve uses an externally brazed joint allowing inspection, and tests showed the Apollo 10 configuration has adequate strength margin. On Apollo 10, if a supercritical helium pressure decay occurs between the first and second descent firings, the solenoid latch valves upstream of the regulators will be closed to conserve helium; the oxidizer-tank compatibility squib valve received RTV potting inside external clamps to prevent leakage if brazes crack. Anomaly closed. (Section 17.2.2)",
+     "source_quote": "The leak experienced during Apollo 9 was probably caused by a defective braze that was internal to the squib valve and could not be inspected.",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "mission": "Apollo 10",
+   "source": "MR10",
+   "anchors": [
+    {
+     "symptom": "LM ascent stage tumbled with large attitude excursions at staging (body rates ~19 deg/sec pitch, >25 deg/sec roll and yaw); crew fired direct RCS to avoid gimbal lock; abort guidance mode control switch was inadvertently in AUTO rather than ATTITUDE HOLD.",
+     "component_terms": [
+      "abort guidance system (AGS)",
+      "AGS mode control switch",
+      "attitude control switches",
+      "yaw rate gyro",
+      "primary guidance system",
+      "reaction control thrusters (direct coils)",
+      "descent stage staging sequence"
+     ],
+     "documented_cause": "Inadvertent cycling of the abort guidance system (AGS) mode control switch from ATTITUDE HOLD to AUTO by the crew while diagnosing and reacting to an erroneous yaw rate gyro output (yaw gyro reading -1.7 deg/sec, its own anomaly 15.2.10, attributed to stiction from contamination). With the AGS in AUTO and Z-axis steering active, the system commanded the vehicle to point its Z-axis at the command module, driving the high vehicle rates during staging. Postflight analysis of the switches, the panel-3 connectors (P1400, P805), and the common 4-inch panel-3 wire bundle all judged a hardware failure highly unlikely.",
+     "corrective_action": "Event attributed to the inadvertent AGS mode-control switch cycling (compounded by the yaw rate gyro error); switch, connector, and wiring hardware-failure modes were analyzed and exonerated. No specific hardware corrective action prescribed; anomaly closed. (Associated yaw rate gyro fault 15.2.10 closed as suspected stiction caused by contamination.)",
+     "source_quote": "It is, therefore, concluded that the anomaly was caused by the inadvertent cycling of the abort guidance mode control switch, followed immediately by an incorrect output of the yaw rate gyro. In diagnosing the yaw rate gyro problem, and in reacting to it, the abort guidance mode control switch was transferred to the AUTO position, resulting in high vehicle rates during the staging sequence.",
+     "verified": true
+    },
+    {
+     "symptom": "LM cabin pressure dropped rapidly (from 4.86 psia to ~0.70 psia across a 12-second telemetry dropout) during ascent-stage separation/jettison from the command module; the docking tunnel had not been vented beforehand.",
+     "component_terms": [
+      "lunar module cabin",
+      "docking tunnel",
+      "tunnel vent line / tunnel vent system",
+      "forward (upper) hatch",
+      "hatch latch",
+      "separation pyrotechnics",
+      "command module docking ring"
+     ],
+     "documented_cause": "The docking tunnel could not be vented before separation because an incorrect fitting had been installed on the tunnel vent line (anomaly 15.1.16 'Tunnel Would Not Vent'), effectively capping the vent, so the tunnel stayed pressurized at 4.86 psia. When the separation pyrotechnics fired, the resulting hatch differential pressure exceeded the LM upper-hatch latch capability (latch failed in static test at ~4.1 psi differential); the hatch broke free, opened, and reclosed ~0.3 second later, venting the cabin through the tunnel. On Apollo 9 the tunnel had been vented, so the latch did not fail.",
+     "corrective_action": "For the cabin-pressure drop itself, no corrective action required 'since the conditions at separation were not normal.' For the underlying tunnel-vent fault (15.1.16), an end-to-end vent-system verification test (waived on Apollo 10) will be performed on Apollo 11 and subsequent flights.",
+     "source_quote": "The only difference between Apollo 9 and 10 was that the Apollo 10 tunnel could not be vented because the vent line was capped ... On Apollo 10, with the tunnel pressurized to 4.86 psia, the differential pressure when the pyrotechnics were fired was enough to fail the latch.",
+     "verified": true
+    },
+    {
+     "symptom": "Ascent-propulsion low-propellant-level warning light came on approximately 1 second after the start of the first ascent engine firing and triggered a master alarm; the light went out about 1 second later and the master alarm was reset.",
+     "component_terms": [
+      "ascent propulsion system",
+      "propellant low-level sensor",
+      "oxidizer sensor / oxidizer tank",
+      "low-level warning light",
+      "master alarm (caution and warning)",
+      "ascent propellant tanks",
+      "+X translation (ullage / propellant-settling) firing"
+     ],
+     "documented_cause": "Valid low-level indication caused by the oxidizer low-level sensor being momentarily uncovered by a gas bubble at ignition. On Apollo 10 the ascent propellant tanks were filled only ~50 percent, and the +X translation used to settle the propellants was only ~3 seconds (deliberately kept short to prevent helium ingestion into the engine), too brief to fully settle the propellants. Sensors are non-latching and functioned properly for the rest of the mission (both low-level indications came on at the correct time during the later ascent firing to depletion), confirming the first warning was genuine.",
+     "corrective_action": "The propellant-settling prediction technique will be revised and the +X translation (ullage) firing time increased to prevent recurrence of the low-level master alarm at ignition. No corrective action required for Apollo 11 and subsequent, because nominal missions fire the ascent engine only once, from the lunar surface (1/6-g field), where the propellants are well settled.",
+     "source_quote": "Data indicate that the low-level light and master alarm were triggered by the oxidizer sensor. ... This indicates that the first warning was valid and caused by the sensor being uncovered by a gas bubble.",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "mission": "Apollo 11",
+   "source": "MR11",
+   "anchors": [
+    {
+     "symptom": "1202 and 1201 program alarms during powered descent, tied to rendezvous radar switch configuration",
+     "documented_cause": "Executive overflow (program) alarms were caused by the guidance computer being unable to complete all scheduled data processing in a computation cycle. More than 10-15% of computer capacity was preempted by spurious counter interrupts from the rendezvous radar coupling data units. With the rendezvous radar mode switch not in the LGC position, the radar shaft/trunnion resolvers were excited by the 28-volt, 800-hertz attitude and translation control assembly voltage, which was frequency-locked but NOT phase-locked to the primary guidance and navigation system 800-hertz reference voltage. Any phase/amplitude difference between the two 800-hertz voltages made the coupling data unit sense a false change in shaft/trunnion position and continuously 'slew' (digitally), transmitting a stream of meaningless counter interrupts (up to 6.4-12.8 kpps) that usurped processor time, causing repetitively scheduled jobs to be multiply scheduled, exhausting erasable memory, and triggering software restarts with Executive overflow program alarms.",
+     "corrective_action": "On future missions the meaningless counter interrupts from the rendezvous radar coupling data unit will not be processed by the Luminary 1B program: when the radar is not powered up or the mode switch is not in the LGC position, the coupling data units will be zeroed, preventing the radar coupling data units from generating counter interrupts. An additional change permits the crew to monitor the descent without requiring as much computer time as Luminary 1A.",
+     "component_terms": [
+      "rendezvous radar",
+      "coupling data unit",
+      "rendezvous radar mode switch",
+      "guidance computer (LGC)",
+      "attitude and translation control assembly",
+      "shaft and trunnion resolvers",
+      "primary guidance and navigation system",
+      "Executive program"
+     ],
+     "source_quote": "The cause for the multiple scheduling of jobs has been identified by analyses and simulations to be primarily counter interrupts from the rendezvous radar coupling data unit. The interrupts during the powered descent resulted from the configuration of the rendezvous radar / coupling data unit / computer interface.",
+     "verified": true
+    },
+    {
+     "symptom": "LM descent engine fuel line high pressure after landing; fuel/helium heat exchanger froze",
+     "documented_cause": "During simultaneous venting of the descent propellant and supercritical helium tanks, fuel in the fuel/helium heat exchanger was frozen by the cold helium flowing through the heat exchanger. Subsequent heat soakback from the descent engine caused expansion of the fuel trapped in the section of line between the heat exchanger and the engine shutoff valve, producing a pressure rise in that line (estimated 700 to 800 psia; interface transducer range only 0 to 300 psia). The heat exchanger, located in the engine compartment, thawed within about half an hour, relieving the line pressure.",
+     "corrective_action": "On future missions the solenoid valve will be closed prior to fuel venting and opened some time prior to lift-off, preventing freezing of fuel in the heat exchanger and allowing the supercritical helium tank to vent later. Appropriate changes to operational procedures will be made.",
+     "component_terms": [
+      "fuel/helium heat exchanger",
+      "descent engine",
+      "engine shutoff valve",
+      "supercritical helium tank",
+      "solenoid valve",
+      "bellows links",
+      "descent propellant tank",
+      "interface pressure transducer"
+     ],
+     "source_quote": "During simultaneous venting of the descent propellant and supercritical helium tanks, fuel in the fuel/helium heat exchanger was frozen by the helium flowing through the heat exchanger. Subsequent heat soakback from the descent engine caused expansion of the fuel trapped in the section of line between the heat exchanger and the engine shutoff valve ... The result was a pressure rise in this section of line.",
+     "verified": true
+    },
+    {
+     "symptom": "LM steerable S-band antenna losing lock / difficulty holding communications during descent",
+     "documented_cause": "Both vehicle structural blockage and lunar-surface multipath signals probably contributed to the reduced measured downlink signal. The antenna coverage-restriction diagrams in the Spacecraft Operational Data Book contained errors for the pointing angles used and failed to include the thruster plume deflectors added to the LM at the launch site; the pointing angles were in (or close to) a blockage area, reducing on-boresight gain and selectivity and increasing side-lobe/multipath interference. A preflight analysis showed the reflected (multipath) ray from the lunar surface alone could cause some of the tracking losses. Antenna hardware itself operated properly (nominal before and after the event).",
+     "corrective_action": "For future missions the correct vehicle blockage and multipath conditions will be determined for the predicted flight trajectory. Operational measures: select vehicle attitudes that orient the antenna away from vehicle blockages, and select vehicle attitude hold with the antenna track mode switch in the SLEW (manual) position during time periods when the problem may occur.",
+     "component_terms": [
+      "steerable antenna",
+      "S-band steerable antenna",
+      "thruster plume deflectors",
+      "antenna track mode switch (SLEW position)",
+      "Spacecraft Operational Data Book",
+      "antenna boresight"
+     ],
+     "source_quote": "In conclusion, both the vehicle blockage and the multipath signals probably contributed to the reduced measured signal.",
+     "verified": true
+    },
+    {
+     "symptom": "O2 flow-rate master alarms during suit-loop / initial lunar module pressurization",
+     "documented_cause": "During the initial lunar module pressurization, two master alarms were activated as the oxygen flow rate decreased from full scale. The filter capacitor in the oxygen flow sensing circuit (a metalized Mylar capacitor, part of an electromagnetic interference filter that prevents fluctuation of the amplifier output to the voltage detector) was open. With the capacitor open, a slow change in flow rate near the threshold voltage of relay K1 causes K1 to continuously open and close (chatter); because relay K2 has a slower dropout time than K1, the 16-second time delay continues to time out, so master alarms can be initiated without resetting the timer. The open filter capacitor was confirmed in postflight tests, which duplicated the master alarms with slow, decreasing flow rates. The only consequence was the nuisance factor.",
+     "corrective_action": "No corrective action is required (no previous failure history of these metalized Mylar capacitors associated with the flow sensors).",
+     "component_terms": [
+      "oxygen flow sensor",
+      "oxygen flow sensing circuit",
+      "filter capacitor (metalized Mylar capacitor)",
+      "electromagnetic interference filter",
+      "relay K1",
+      "relay K2",
+      "master alarm",
+      "voltage detector"
+     ],
+     "source_quote": "The filter capacitor was open during postflight tests, and the master alarms were duplicated with slow, decreasing flow rates. There has been no previous failure history of these metalized Mylar capacitors associated with the flow sensors. No corrective action is required.",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "mission": "Apollo 12",
+   "source": "MR12",
+   "anchors": [
+    {
+     "symptom": "Lightning strike at launch caused the fuel cells to drop off the buses, loss of the inertial platform reference, and garbled/interrupted telemetry",
+     "component_terms": [
+      "fuel cell",
+      "main bus",
+      "signal conditioning equipment",
+      "inertial platform",
+      "coupling display unit",
+      "silicon controlled rectifier (fuel cell overload sensor)",
+      "battery relay bus",
+      "ac inverter / ac bus"
+     ],
+     "documented_cause": "Two lightning discharges were triggered by the vehicle passing through electric fields (36.5 s cloud-to-earth through the vehicle; 52 s cloud-to-cloud). At the first discharge, the voltage transient induced on the battery relay bus exceeded the current rate-of-change characteristics of the silicon controlled rectifiers in the fuel cell overload sensors, disconnecting the fuel cells; the resulting low main-bus voltage illuminated undervoltage lights, dropped out the signal conditioning equipment (garbling telemetry), and tripped the ac undervoltage sensor. At the second discharge, loss of inertial platform reference was caused by the setting of high-order bits in the coupling display unit by discharge transients introduced between signal ground and structural ground, which drove the coarse-align servo loop unstable.",
+     "corrective_action": "Crew restored fuel cell power to the buses at 2 min 22 sec; a computer-program change to inhibit the computer mode-switching logic during the launch phase was implemented for Apollo 13; and launch restrictions were imposed (no launch through cumulonimbus, cold-front/squall-line clouds above 10,000 ft, thick middle cloud layers with freeze level in cloud, or cumulus with tops at/above 10,000 ft, plus standoff distances). Complete lightning protection was deemed impractical.",
+     "source_quote": "The discharge at 36.5 seconds disconnected the fuel cells from the spacecraft buses and damaged nine instrumentation measurements. The discharge at 52 seconds caused loss of reference in the spacecraft inertial platform. ... The voltage transient that was induced on the battery relay bus by the static discharge exceeded the current rate-of-change characteristics of the silicon controlled rectifiers in the fuel cell overload sensors and disconnected the fuel cells from the bus.",
+     "verified": true
+    },
+    {
+     "symptom": "RCS propellant and helium isolation valves closed inadvertently at command/service module-to-S-IVB separation due to pyrotechnic shock",
+     "component_terms": [
+      "helium isolation valve",
+      "propellant isolation valve",
+      "quad A / quad B",
+      "reaction control system",
+      "poppet",
+      "pyrotechnics (separation shock)",
+      "S-IVB separation"
+     ],
+     "documented_cause": "The separation shock produced by the pyrotechnics at S-IVB separation (analysis indicated intensities of 45g to 275g, random in direction, lasting 1 to 3 milliseconds) exceeded the valve qualification level (7g shocks of 11 ms), closing the quad A secondary propellant isolation valve and the quad B number 1 helium isolation valve. The helium valve closes at lower g forces because of its higher poppet mass.",
+     "corrective_action": "Testing established that such closures are not detrimental to the valves (valves shocked repeatedly to 280g showed no damage or degradation, and no adverse flight effects occurred); the crew reopened the valves per preplanned procedures, and procedures will be maintained to verify the position of these valves after separation from the S-IVB.",
+     "source_quote": "The failure investigation test programs for Apollo 9 and 11 led to the conclusion that valve closures can be expected because of the separation shock levels produced by the pyrotechnics, and, that these closures are not detrimental to the valves. ... An analysis of propagation and intensity of the shock at S-IVB separation indicates intensities of 45g to 275g, random in direction and lasting 1 to 3 milliseconds. The valves are qualified for 7g shocks of 11 milliseconds duration in all six direction.",
+     "verified": true
+    },
+    {
+     "symptom": "S-band high-gain antenna showed low signal strength (approx. 10 to 12 dB reduction, uplink and downlink) when operated in the narrow-beam mode",
+     "component_terms": [
+      "S-band high-gain antenna",
+      "narrow-beam comparator",
+      "dual diplexer",
+      "stripline units",
+      "transfer switch",
+      "lobing switch / diode",
+      "frequency-selective power divider"
+     ],
+     "documented_cause": "Operation in the narrow-beam automatic/auto-reacquisition mode produced an approximately 10 to 12 dB reduction in both uplink and downlink signal strength. The malfunction was isolated (highest probability) to the narrow-beam comparator or the dual diplexer stripline units - a phase shift/attenuation produced by a diode fault or an intermittent, temperature-sensitive circuit connection (e.g., a solder crack or wire break / trace crack) causing a boresight shift and overdamped tracking. The wide-beam comparator and transfer switch were ruled out.",
+     "corrective_action": "New phase-III striplines, which should eliminate the problem, will be used on Apollo 13 and subsequent spacecraft. (For the associated noise-spike aspect, no generic problem was isolated and no system changes were planned.)",
+     "source_quote": "Malfunctions in the dual diplexer or narrow beam comparator are considered to have the highest probability as causes of the anomaly. New phase-III striplines, which should eliminate the problem, will be used on Apollo 13 and subsequent spacecraft.",
+     "verified": true
+    },
+    {
+     "symptom": "Oxygen usage was higher than expected; a leak existed in the 900-psi service module oxygen system",
+     "component_terms": [
+      "900-psi oxygen system",
+      "service module",
+      "environmental control system",
+      "fuel cell",
+      "check valve",
+      "oxygen flowmeter / flow sensor",
+      "cryogenic oxygen"
+     ],
+     "documented_cause": "At end of mission there was an approximately 27-pound discrepancy between the measured total cryogenic oxygen usage and the calculated combined environmental control system plus fuel cell usage. No excessive flow was detected downstream of the flowmeter, limiting any command module leakage to the 900-psi system upstream of the meter; postflight leak tests of the command module 900-psi system (including all check valves) were within specification limits. It was therefore concluded that the 27 pounds of oxygen leaked from those portions of the 900-psi system located within the service module.",
+     "corrective_action": "None required - tests of these systems prior to flight are considered adequate, and no corrective action is required.",
+     "source_quote": "It is therefore concluded that the 27 pounds of oxygen must have leaked from those portions of the 900-psi system within the service module. Tests of these systems prior to flight are considered adequate, and no corrective action is required.",
+     "verified": true
+    },
+    {
+     "symptom": "Optics shaft angle (computer register) fluctuated as much as 0.7 degree when the system was placed in the zero-optics mode",
+     "component_terms": [
+      "optics shaft",
+      "zero optics mode",
+      "power-and-servo assembly",
+      "motor drive amplifier module",
+      "relay module",
+      "two-speed switch module",
+      "optical unit",
+      "optics drive servomechanism"
+     ],
+     "documented_cause": "Analysis of the zero-optics-mode circuitry isolated the problem to the power-and-servo assembly - either a relay module, a two-speed switch module, or the motor drive amplifier module - with the motor drive amplifier module the most likely cause because it contains the only active signal-shaping network. The in-flight symptoms were reproduced on a breadboard by introducing 600 to 800 millivolts of noise into the in-phase carrier. The optical unit could not be tested because of extensive sea-water corrosion, and no single defect could be isolated.",
+     "corrective_action": "No system changes are planned: a number of component malfunctions and shielding failures could combine to introduce this level of noise, but no generic problem or design deficiency was isolated and system performance and component operation were not affected.",
+     "source_quote": "Analysis of the circuitry involved in the zero optics mode has isolated the problem to either a relay module, a two-speed switch module, or the motor drive amplifier module. Of these, the motor drive amplifier module is the most likely cause of the anomaly observed, since it contains the only active signal-shaping network. ... Therefore, no system changes are planned.",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "mission": "Apollo 14",
+   "source": "MR14",
+   "anchors": [
+    {
+     "symptom": "Docking probe would not capture; repeated attempts and capture latches failed to engage before hard dock.",
+     "component_terms": [
+      "docking probe",
+      "capture latches",
+      "probe tip",
+      "docking mechanism",
+      "probe and drogue",
+      "command module docking system"
+     ],
+     "documented_cause": "The most probable cause was contamination or debris in the docking probe mechanism which prevented the capture latches from engaging and which later became dislodged, allowing a normal docking on a subsequent attempt.",
+     "corrective_action": "A cover will be provided to protect the probe tip from foreign material entering the mechanism prior to flight.",
+     "source_quote": "The most probable cause of the problem was contamination or debris which later became dislodged.",
+     "verified": true
+    },
+    {
+     "symptom": "A spurious ABORT bit was set in the LM guidance computer before powered descent.",
+     "component_terms": [
+      "abort switch",
+      "abort-switch module",
+      "LM guidance computer",
+      "descent engine control",
+      "abort pushbutton",
+      "guidance computer software"
+     ],
+     "documented_cause": "The most probable cause of the spurious abort command was metallic contamination within the hermetically sealed abort-switch module, which intermittently closed the abort switch contacts and set the abort bit in the computer.",
+     "corrective_action": "Corrective actions included replacing the switches (with X-ray and vibration screening), a circuit modification requiring dual contacts for the abort functions, and software modifications allowing the crew to lock out computer-recognized abort commands.",
+     "source_quote": "The most probable cause of the abort command was metallic contamination within the hermetically sealed abort-switch module.",
+     "verified": true
+    },
+    {
+     "symptom": "Landing radar would not lock on during descent; crew cycled the breaker to change scale.",
+     "component_terms": [
+      "landing radar",
+      "landing radar antenna",
+      "antenna side lobe",
+      "range (velocity) scale",
+      "slant range",
+      "antenna position 1"
+     ],
+     "documented_cause": "The high slant range indicated at lock-on was most likely caused by the landing radar locking onto energy returned into the antenna side lobe; the conditions exceeded the maximum range measurement design limit, prompting the scale switching.",
+     "corrective_action": "On future spacecraft, a wiring modification will be made to enable holding the system in high scale while in antenna position 1.",
+     "source_quote": "The high slant range indicated at lock-on by the landing radar was most likely caused by the radar locking onto energy returned into the antenna side lobe.",
+     "verified": true
+    },
+    {
+     "symptom": "The Abort Guidance System went dead during rendezvous braking.",
+     "component_terms": [
+      "abort guidance system",
+      "abort electronics assembly",
+      "power supply",
+      "sequencer",
+      "abort sensor assembly",
+      "data entry and display assembly"
+     ],
+     "documented_cause": "The failure was isolated to the power supply section or the sequencer of the abort electronics assembly; the specific underlying component defect was not identified, and design margins and manufacturing procedures were found adequate.",
+     "corrective_action": "No corrective action is in order.",
+     "source_quote": "These conditions isolate the failure to the power supply section or the sequencer of the abort electronics assembly.",
+     "verified": true
+    },
+    {
+     "symptom": "Rapid-repressurization oxygen bottles lost pressure, requiring extra cabin repressurizations.",
+     "component_terms": [
+      "rapid repressurization system",
+      "900-psi oxygen system",
+      "repressurization oxygen bottles",
+      "cabin repressurization",
+      "environmental control system"
+     ],
+     "documented_cause": "Postflight checks of the 900-psi rapid repressurization system showed an elevated leakage rate (about 40 standard cc/min versus a preflight value of 14 standard cc/min), consistent with the observed loss of pressure requiring additional repressurizations.",
+     "corrective_action": "Future crews will be briefed on the recharging techniques for other than normal rechargings to insure that the system is fully recharged.",
+     "source_quote": "Postflight checks of the 900-psi system showed that the leakage rate was about 40 standard cc/min as compared with the preflight value of 14 standard cc/min.",
+     "verified": true
+    },
+    {
+     "symptom": "Crew was unable to disconnect (open) main bus A.",
+     "component_terms": [
+      "main bus A",
+      "motor switch",
+      "commutator",
+      "brushes",
+      "main bus tie motor switch",
+      "electrical power system"
+     ],
+     "documented_cause": "The motor switch stalled: a black track of deposits from the brushes on the commutator increased the brush-to-commutator resistance, causing the motor to run slower and fail to complete the transfer to disconnect main bus A.",
+     "corrective_action": "A check of the switch response time can indicate the dependability of the switch to perform one or several additional switch transfers in flight.",
+     "source_quote": "A black track of deposits from the brushes was found on the Apollo 14 commutator...the resistance between the brushes and commutator became higher.",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "mission": "Apollo 15",
+   "source": "MR15",
+   "anchors": [
+    {
+     "symptom": "The service propulsion system (SPS) thrust light on the entry monitor system (EMS) illuminated with no engine fire command, traced to an intermittent short to ground in the system A delta-V thrust switch.",
+     "component_terms": [
+      "service propulsion system",
+      "entry monitor system",
+      "delta-V thrust switch",
+      "SPS thrust light",
+      "system A",
+      "feed-through terminal"
+     ],
+     "documented_cause": "The SPS thrust light on the EMS came on without a fire command because the system A delta-V thrust switch was intermittently shorted to ground. The short path was created by a loose wire strand (about 0.055 inch long) lying on the flange of terminal 2 inside the switch feed-through terminal cavity, which produced an arc/short to ground.",
+     "corrective_action": "Switch screening was enhanced for the Apollo 16 and 17 spacecraft: 3000/4000-series switches required for crew safety or mission success were subjected to X-ray inspection before and after acceptance vibration testing, and circuit-breaker protection was added. Anomaly closed.",
+     "source_quote": "The short was isolated to the system A delta-V thrust switch which was found to be intermittently shorted to ground.",
+     "verified": true
+    },
+    {
+     "symptom": "During descent one of the three main parachutes collapsed near 6000 feet and the command module landed on two parachutes.",
+     "component_terms": [
+      "main parachute",
+      "command module reaction control system",
+      "reaction control system engine",
+      "monomethylhydrazine fuel",
+      "propellant dump",
+      "connector link"
+     ],
+     "documented_cause": "The most likely cause was the command module reaction control system (CM RCS) fuel (monomethylhydrazine) dump through the hot RCS engines. Ground testing showed the fuel burned profusely when dumped through a hot engine, and the resulting burning damaged a parachute, causing one main parachute to collapse.",
+     "corrective_action": "For a normal landing the propellants are to be retained onboard rather than dumped; the propellant load is biased to a slight excess of oxidizer; the propellant-dump time delay was extended from 42 to 61 seconds; and connector link material was changed from 4130 to Inconel 718. Anomaly remained open.",
+     "source_quote": "Testing of a command module reaction control system engine simulating the fuel (monomethylhydrazine) dump mode through a hot engine resulted in the fuel burning profusely; therefore, the fuel dump is considered to be the most likely cause of the anomaly.",
+     "verified": true
+    },
+    {
+     "symptom": "Water leaked from the chlorine injection port on the water panel when the cap was removed.",
+     "component_terms": [
+      "water panel",
+      "chlorine injection port",
+      "septum",
+      "insert",
+      "O-ring",
+      "cap"
+     ],
+     "documented_cause": "The compression on the chlorine injection port septum was insufficient, so the insert loosened due to 'O-ring drag' when the cap was removed, allowing water to leak from the port.",
+     "corrective_action": "A shim will be installed under the insert shoulder to control the septum compression while allowing the installation torque to be increased to a range of 48 to 50 in-lb on subsequent spacecraft. Anomaly closed.",
+     "source_quote": "The resulting septum compression was apparently insufficient to prevent the insert from loosening as a result of 'O-ring drag' when the cap was removed.",
+     "verified": true
+    },
+    {
+     "symptom": "Service module reaction control system (SM RCS) propellant isolation valve talkbacks repeatedly indicated closed (barber pole).",
+     "component_terms": [
+      "service module reaction control system",
+      "propellant isolation valve",
+      "talkback indicator",
+      "magnetic latching valve",
+      "magnet"
+     ],
+     "documented_cause": "The propellant isolation valve magnet had been partially degaussed, most likely by exposure to a reversed polarity at a voltage level sufficient to degauss the magnet during testing, which weakened the magnetic latching force so the valve talkbacks indicated closed.",
+     "corrective_action": "A magnetic latching force test will be performed on subsequent valve assemblies (after system assembly) to verify that the valve latching forces are acceptable. Anomaly closed.",
+     "source_quote": "The valve was most likely subjected to a reversed polarity at a voltage level which would partially degauss the magnet.",
+     "verified": true
+    },
+    {
+     "symptom": "AC bus 2 and DC main bus B undervoltage alarms occurred with loss of the DSKY and panel (integral) lighting.",
+     "component_terms": [
+      "AC bus 2",
+      "DC main bus B",
+      "mission timer",
+      "input filter capacitor",
+      "DSKY",
+      "integral lighting circuit breaker"
+     ],
+     "documented_cause": "A shorted input filter capacitor in the mission timer caused the AC bus 2 and DC main bus B undervoltage alarms and the loss of DSKY/panel integral lighting. The ceramic capacitor is rated for 200-volt dc applications but was being used in an ac application at voltages up to 115 volts, and it broke down (mechanical fatigue).",
+     "corrective_action": "Fuses were added to the mission timers in the Apollo 16 and 17 command modules, and the timer design was corrected with inline changes for both the command module and lunar module timers. Anomaly closed.",
+     "source_quote": "The capacitor is rated for 200-volt d-c applications and is being used in an a-c application at voltages up to 115 volts.",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "mission": "Apollo 16",
+   "source": "MR16",
+   "anchors": [
+    {
+     "symptom": "During the pre-ignition checklist for the lunar-orbit circularization maneuver, an oscillation (limited at +/-1.0 deg, 2.4 Hz) appeared in the yaw axis of the SPS engine gimbal secondary servo system, present in all modes but only when the secondary yaw servo loop was used; the powered descent to the lunar surface was delayed about 5-3/4 hours while the problem was evaluated.",
+     "component_terms": [
+      "service propulsion engine gimbal actuator",
+      "secondary yaw servo loop",
+      "rate feedback loop",
+      "thrust vector servo assembly",
+      "engine gimbal actuator wiring harness connectors",
+      "yaw gimbal wiring loop",
+      "service module wiring"
+     ],
+     "documented_cause": "An open in the rate feedback loop of the secondary yaw servo system. Postflight testing of command module wiring/connectors and bench testing of the thrust vector servo assembly revealed no abnormalities, so the failure must have occurred in the service module wiring or connectors. Most probable causes: pin corrosion on the engine gimbal actuator wiring harness connectors, or broken wires in the yaw gimbal wiring loop resulting from inadequate strain relief due to cable flexing.",
+     "corrective_action": "Routing of the wiring harness to the actuator assembly on Apollo 17 was changed to provide adequate strain relief and prevent harness flexing during engine gimbaling; the position of the lower harness clamp was changed on the remaining vehicles to provide strain relief. Anomaly closed. (Testing/analysis had also shown the secondary system would damp after ignition and was safe to use if needed.)",
+     "source_quote": "The cause of the failure was an open in the rate feedback loop of the secondary yaw servo system. ... Possible pin corrosion on the engine gimbal actuator wiring harness connectors or broken wires in the yaw gimbal wiring loop are the most probable causes of the flight problem. A broken wire would result from inadequate strain relief ... due to cable flexing.",
+     "verified": true
+    },
+    {
+     "symptom": "About 3 hours into the mission the water/glycol temperature control circuit malfunctioned in the automatic mode, allowing excessive hot water/glycol to bypass the radiator so the mixed temperature exceeded the 48 F upper control limit; the valve cycled then stopped at maximum bypass, and the control was left in manual (positioned manually thereafter) for the rest of the flight.",
+     "component_terms": [
+      "water/glycol temperature control circuit",
+      "water/glycol temperature controller (valve controller)",
+      "temperature control valve",
+      "silicon-controlled rectifiers",
+      "radiator",
+      "primary coolant loop",
+      "evaporator"
+     ],
+     "documented_cause": "A malfunction in the water/glycol temperature controller (valve controller) that modulates the control valve. Postflight testing isolated the problem to the valve controller and identified two separate problems: an intermittent condition in a feedback loop, and a loss of control of the output silicon-controlled rectifiers. A component analysis was still under way to determine the cause of each; the anomaly was left OPEN.",
+     "corrective_action": "No final corrective action stated in the report; the anomaly was OPEN, with a component analysis in progress to determine the cause of each identified problem. (A similar controller also malfunctioned on Apollo 17 ground tests, showing loss of control of the output silicon-controlled rectifiers.)",
+     "source_quote": "Postflight testing has isolated the problem to the valve controller. Two separate problems have been identified in the controller. The first is an intermittent condition in a feedback loop. The second is a loss of control of the output silicon-controlled rectifiers. A component analysis is being performed to determine the cause of each problem. ... This anomaly is open.",
+     "verified": true
+    },
+    {
+     "symptom": "At 38:18:56 the computer issued a gimbal lock indication when no gimbal lock condition existed (vehicle in passive thermal control, computer in platform realignment program). The computer downmoded the inertial subsystem to coarse align, caging the platform to the present body reference angles; the crew realigned the platform by optical sightings on the sun and earth.",
+     "component_terms": [
+      "thrust vector enable relay",
+      "coupling data unit",
+      "middle gimbal angle read counter",
+      "digital-to-analog converter",
+      "800-hertz excitation transformer",
+      "inertial measurement unit / platform",
+      "coarse align relay"
+     ],
+     "documented_cause": "Contact bounce in the thrust vector enable relay. Selecting the computer idling program removed the thrust vector enable discrete, switching the relay between two 800-Hz excitation-voltage sources feeding a transformer in the digital-to-analog converter of the coupling data unit. The relay-contact bounce interrupted the 800-Hz voltage, producing a transient (up to ~250 V) that was electromagnetically coupled into the middle gimbal angle read counter and erroneously set the 90-degree bit, so the computer sensed a >85 deg middle gimbal angle (gimbal lock).",
+     "corrective_action": "Addition of a filter across the primary of the transformer in the digital-to-analog converter portion of the coupling data unit. (In flight the crew used an erasable program to inhibit the computer from changing the coarse align relay whenever the thrust vector enable relay was used.) Anomaly closed.",
+     "source_quote": "The cause of the problem is contact bounce in the thrust vector enable relay ... Interrupting the 800-hertz voltage caused a transient which was electromagnetically coupled into the middle gimbal angle coupling data unit read counter which erroneously set the 90-degree bit. ... Corrective action will be the addition of a filter across the primary of the transformer in the digital-to-analog converter portion of the coupling data unit.",
+     "verified": true
+    },
+    {
+     "symptom": "The heat leak into cryogenic hydrogen tank 3 was abnormally high during the early hours of the mission (about 15 to 20 Btu/hr versus a normal 2 to 6 Btu/hr), decreasing to normal by roughly 70 to 80 hours and remaining normal thereafter; heat leak had been normal prior to lift-off.",
+     "component_terms": [
+      "cryogenic hydrogen tank 3",
+      "insulation vacuum annulus",
+      "gold-coated H-film insulation",
+      "outer shell (pressure vessel)",
+      "vacuum ion pump"
+     ],
+     "documented_cause": "Degradation of the insulating vacuum in the annulus (by about one decade, ~10^-6 to 10^-5 torr) caused by an ambient air leak into the insulation vacuum annulus, most probably from a small hole/crack that opened in the outer shell about 2-1/2 minutes after lift-off during launch. Insulation scrubbing and a hydrogen leak from the pressure vessel were analytically ruled out. Decreasing ambient (bay) pressure gradually re-established the annulus vacuum, returning the heat leak to normal by ~80 hours.",
+     "corrective_action": "No corrective action taken; preflight procedures and tank inspection were judged adequate, and a launch-induced outer-shell leak would self-recover as the vacuum re-establishes later without significantly affecting total heat input. Anomaly closed.",
+     "source_quote": "The most likely cause of the high heat leak rate early in the mission was the formation of an ambient air leak into the insulation vacuum annulus at approximately 2 1/2 minutes after lift-off. Decreasing ambient pressure gradually returned the annulus vacuum and, likewise, the heat leak rate to normal levels by 80 hours. ... No corrective action will be taken since the preflight procedures and inspection of the tanks are adequate.",
+     "verified": true
+    },
+    {
+     "symptom": "High-gain antenna operation was lost for about 1-1/2 hours beginning at 234:14 while the CSM was in passive thermal control and the crew asleep. The antenna reached the scan limit and failed to drive to the manually set position, remaining there until the crew cycled the high-gain antenna track mode switch from 'reacquisition' to 'manual' and back, which restored normal acquisition.",
+     "component_terms": [
+      "high-gain antenna",
+      "track mode switch",
+      "mode select switch",
+      "logic inhibit gate (integrated circuit)",
+      "high-gain antenna electronics box",
+      "scan-limit logic"
+     ],
+     "documented_cause": "Tests could not reproduce the fault in a normal circuit; the documented probable cause is an unscheduled 'inhibit' arising from simultaneous selection of both the 'reacquisition' and 'automatic' track modes (which would require a fault in the mode select switch, spacecraft wiring, or antenna electronics - switch and wiring were checked and found good), or, alternatively, a malfunction of one of the two logic inhibit gates. The most likely mechanism cited is an internal short from a floating particle inside the integrated circuit generating the inhibit (a device made before passivation was incorporated); the particle could later move and clear the intermittent condition.",
+     "corrective_action": "No corrective action planned, because contamination in the electronics box has a low probability of occurring and, if the problem became permanent in one electronics box, the secondary (redundant) unit can be selected. Anomaly closed.",
+     "source_quote": "Tests did indicate, however, that the anomaly could be the result of simultaneous selection of both the \"reacquisition\" and \"automatic\" track modes. ... The other possibility for the cause of the anomaly is that one of the two logic inhibit gates may have malfunctioned. ... These types of devices have been found susceptible to contamination from internal floating particles. A particle can move ... and create an internal short which changes the state. ... No corrective action is planned because experience shows contamination in the electronics box has a low probability of occurring.",
+     "verified": true
+    },
+    {
+     "symptom": "During pressurization of the LM reaction control system at about 95 hours, the system A regulator outlet pressure rose above regulator lockup (past the normal 184 psia at ~10 psi/min), indicating internal regulator leakage. Helium leakage continued throughout the mission (varying from ~0 to ~1100 scc/min); outlet pressure eventually reached ~237 psia and the system A relief valves began periodically relieving to about 232 psia. Propellant transfers were performed to preserve a blowdown capability.",
+     "component_terms": [
+      "reaction control system (system A)",
+      "helium regulator assembly",
+      "primary regulator",
+      "secondary regulator",
+      "regulator poppet / poppet seat",
+      "relief valve",
+      "regulator inlet filter",
+      "quad check valve"
+     ],
+     "documented_cause": "Internal leakage in the regulator assembly caused by particulate contamination on the poppet seats (the variable leak rate is characteristic of particulate contamination). The most probable cause is contamination introduced during component replacement (a quick disconnect downstream of the regulator outlet was replaced three times, requiring brazing) and subsequently swept into the regulator outlet by backflow during launch-site testing; lubricant/grease on sealing surfaces may have trapped the contaminants. Disassembly of sample regulators found ~90 particles/fibers >100 microns, exceeding the cleanliness spec.",
+     "corrective_action": "No components were replaced downstream of the Apollo 17 LM regulators, and launch-site testing was changed to eliminate regulator backflow: (a) the quad check valve cracking test is performed by pressurizing through the quick disconnect upstream (rather than downstream) of the regulator; (b) a caution-and-warning limits test is done before the regulator functional test with the secondary regulator locked up; (c) a test was added to verify the secondary regulator poppets seat at low differential pressures. Anomaly closed.",
+     "source_quote": "The most probable cause of the leakage is contamination introduced during component replacement and, subsequently, swept into the regulator outlet by backflow. There is also the possibility that lubricant existed on the sealing surfaces to capture the contaminants. ... The outlet pressure of system A, after reaching the normal value of 184 psia, continued to rise at approximately 10 psi/minute, a condition which clearly indicated the existence of internal leakage in the regulator assembly.",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "mission": "Apollo 17",
+   "source": "MR17",
+   "anchors": [
+    {
+     "symptom": "spurious master alarms with no caution-warning lights, main bus A undervolt light flickering, intermittent short",
+     "component_terms": [
+      "master alarm",
+      "caution and warning system",
+      "main bus A undervoltage warning circuit",
+      "main bus A undervoltage warning light",
+      "panel 2",
+      "main A reset switch",
+      "cryogenic pressure indicator switch",
+      "cryogenic oxygen pressure meter"
+     ],
+     "documented_cause": "An intermittent short-to-ground in the main bus A undervoltage warning circuit — an intermittent ground on panel 2 that occurred only under zero-g conditions. The short could be in the wiring or conductive contamination in the main A reset switch. A separate intermittent ground in the cryogenic pressure indicator switch, its wiring, or the cryogenic oxygen pressure meter caused the alarms that coincided with switching the cryogenic pressure indicator switch to position 1/2. Postflight inspection of all panel 2 wiring, disassembly of the main A reset switch, and disassembly of the cryogenic pressure switch and meter found no shorts, contamination, or problems.",
+     "corrective_action": "None required. The spurious warnings were only a nuisance, valid warnings could not be inhibited by this type of grounding, and the lamp's inherent current-limiting characteristics meant no safety hazard existed. Corrective action deemed unnecessary for the Skylab or Apollo-Soyuz spacecraft. Anomaly closed.",
+     "source_quote": "The spurious master alarms are indicative of an intermittent grounding of the circuit... An intermittent short-to-ground in the main bus A undervoltage warning circuit (fig. 15-1) would cause the alarm and the main bus A undervoltage warning light to flicker. The short could be in the wiring or could be conductive contamination in the main A reset switch.",
+     "verified": true
+    },
+    {
+     "symptom": "cryogenic hydrogen tank pressure deadband narrowed, contaminated pressure switch",
+     "component_terms": [
+      "cryogenic hydrogen system",
+      "hydrogen tank 1",
+      "hydrogen tank 2",
+      "pressure switch",
+      "toggle plate",
+      "stop mechanism",
+      "heaters",
+      "fans"
+     ],
+     "documented_cause": "Contamination in the tank pressure switch. Hard particles — burrs found breaking off the coined toggle plate — floating in the switch's stop-mechanism area under zero-gravity restricted the full travel of the stop, changing the pressures at which the shaft transfers and thereby narrowing the operating deadband (from about 16 psi to about 3 psi). The effect appeared and disappeared depending on particle location; a piece of metal only about 0.004 inch can reduce the upper limit by ~7 psi. Only contamination satisfied all of the peculiar flight characteristics and data.",
+     "corrective_action": "Further inspection of assembled pressure switches judged unnecessary; for the Skylab and Apollo-Soyuz Test Program a problem of this nature can be handled by manual control of the fans and heater cycles (as was done for the remainder of Apollo 17 using manual fan operation in tanks 1 and 2). Anomaly closed.",
+     "source_quote": "hard particles floating in the stop mechanism area shown in figure 15-13 can have a variable effect which can appear and disappear depending on the location of the floating particles... Other possibilities were investigated, however, only contamination satisfies all of the peculiar flight characteristics and data.",
+     "verified": true
+    },
+    {
+     "symptom": "EMS accelerometer null-bias shift, 0.05g light illuminated erroneously",
+     "component_terms": [
+      "entry monitor system",
+      "accelerometer",
+      "0.05g light",
+      "rebalance coil",
+      "temperature compensation circuit",
+      "function switch",
+      "self-test torquer coil",
+      "damping fluid"
+     ],
+     "documented_cause": "Root cause not conclusively established (postflight test of the removed unit was normal). Three candidate causes were identified: (a) a contaminant particle or bubble in the accelerometer damping fluid migrating into the magnetic gap or lodging in the balance hair springs, creating an offset force on the bobbin; (b) an intermittent open in the temperature-compensation circuit of the accelerometer rebalance circuit (analysis showed this would account for only half the observed shift); (c) an intermittent short between contacts of the 12-position rotary function switch supplying a small current to the self-test torquer coil. The large accelerometer null bias accounts for the erroneously sensed 0.05-g level.",
+     "corrective_action": "Entry procedures were revised to circumvent the premature 0.05-g indication during entry. No further action to be taken, since the resulting velocity-counter inaccuracy is acceptable, the Skylab entry profile can tolerate it, and the entry monitor system is a backup to the primary guidance system. Anomaly closed.",
+     "source_quote": "During step 1 of the system test prior to entry, the 0.05g light illuminated erroneously, indicating an acceleration level greater than 0.05g. A large accelerometer null bias, as indicated in the earlier bias tests, can account for the sensed 0.05-g level. The entry procedures were revised to circumvent the premature 0.05-g indication during entry.",
+     "verified": true
+    },
+    {
+     "symptom": "water-glycol temperature control valve failed to open properly",
+     "component_terms": [
+      "water/glycol temperature control valve",
+      "valve gear train",
+      "radiator outlet",
+      "evaporator",
+      "gear teeth",
+      "valve clutch mechanism",
+      "dry lubricant"
+     ],
+     "documented_cause": "Slight sticking in the valve gear train after it had been driven hard against the full-closed stop during the hot portions of the lunar orbits; a larger-than-normal temperature error and modulated electrical signal were needed to free the train so the valve would start to drive open. Dimensional checks showed the pitch circles of two gear pairs in the train were not tangent, producing sliding rather than rolling action between contacting teeth that scraped the dry lubricant off the teeth; sliding friction between the unlubricated gear teeth may have been high enough to cause the sticking.",
+     "corrective_action": "No corrective action taken in flight; mixing initiated properly on all subsequent lunar orbits and during transearth coast. Manual disengagement of the valve clutch mechanism relieves back-pressure on the gears and frees the gear train (demonstrated in checkout). Since manual valve operation is satisfactory for the Skylab and Apollo-Soyuz missions, no further action necessary. Anomaly closed.",
+     "source_quote": "The system behavior indicates that some slight sticking occurred in the valve gear train after having been driven hard against the full closed stop during the hot portions of the lunar orbits... Sliding friction between the unlubricated gear teeth may have been high enough to cause the sticking experienced.",
+     "verified": true
+    },
+    {
+     "symptom": "LM oxygen demand regulator A suit-loop leakage during EVA depressurization, switched to regulator B",
+     "component_terms": [
+      "oxygen demand regulator A",
+      "demand regulator B",
+      "suit loop",
+      "ball poppet",
+      "regulator seat",
+      "cabin depressurization",
+      "extravehicular activity"
+     ],
+     "documented_cause": "Suit-loop leakage (0.04 lb/hr) attributed to contamination of the regulator A seat — most probably a particle of about 2.5 microns lodged between the regulator (ball) poppet and the seat. Inadvertent bumping of the regulator handle by the crew was considered but judged not likely. The upstream contamination level was 25 microns, considered adequate because of the low probability of particle entrapment in a ball-type seat.",
+     "corrective_action": "The crew switched to demand regulator B for the remainder of the mission. Corrective action will not be required as this equipment is not to be used on future spacecraft. Anomaly closed.",
+     "source_quote": "While using demand regulator A for cabin depressurization in preparation for the third extravehicular activity, the data show the suit loop to be leaking at a 0.04 lb/hr rate. The crew switched to regulator B for the remainder of the mission... the leakage could have occurred if a particle of 2.5 microns became lodged between the regulator (ball) poppet and the seat.",
+     "verified": true
+    }
+   ]
+  }
+ ]
+}
