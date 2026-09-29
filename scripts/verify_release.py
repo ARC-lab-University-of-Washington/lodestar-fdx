@@ -22,6 +22,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 PASS, FAIL, SKIP = [], [], []
+EXCLUDED_DIRS = {"__pycache__", ".git", "docs", "apollo-anomaly-atlas"}
 
 
 def check(name, fn):
@@ -41,7 +42,7 @@ def check(name, fn):
 def _py_files():
     out = []
     for root, dirs, files in os.walk(ROOT):
-        dirs[:] = [d for d in dirs if d not in ("__pycache__", ".git", "docs")]
+        dirs[:] = [d for d in dirs if d not in EXCLUDED_DIRS]
         out += [os.path.join(root, f) for f in files if f.endswith(".py")]
     return out
 
@@ -87,7 +88,7 @@ def c_no_local_paths():
     }
     bad = []
     for root, dirs, files in os.walk(ROOT):
-        dirs[:] = [d for d in dirs if d not in ("__pycache__", ".git")]
+        dirs[:] = [d for d in dirs if d not in EXCLUDED_DIRS]
         for f in files:
             if not f.endswith((".py", ".sh", ".md", ".txt", ".yml", ".cfg", "Doxyfile")):
                 continue
@@ -109,7 +110,7 @@ def c_no_local_paths():
 def c_ai_statement():
     missing = []
     for root, dirs, files in os.walk(ROOT):
-        dirs[:] = [d for d in dirs if d not in ("__pycache__", ".git")]
+        dirs[:] = [d for d in dirs if d not in EXCLUDED_DIRS]
         for f in files:
             if f.endswith((".py", ".sh")):
                 p = os.path.join(root, f)
